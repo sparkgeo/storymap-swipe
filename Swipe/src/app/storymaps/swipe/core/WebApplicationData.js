@@ -307,6 +307,14 @@ define(["dojo/_base/lang", "esri/geometry/Extent"], function(lang, Extent){
 		setSocial: function(social)
 		{
 			_data.values.social = social;
-		}
+		},
+        getMaptiks: function ()
+        {
+          return _data.values.maptiks || {};
+        },
+        setMaptiks: function (data)
+        {
+          _data.values.maptiks = data;
+        }
 	}
 });

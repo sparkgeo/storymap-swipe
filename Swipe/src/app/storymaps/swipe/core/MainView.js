@@ -62,6 +62,29 @@ define(["dojo/dom-construct",
 			{
 				_core = core;
 
+                // *******************************************
+                // **** Maptiks Changes below
+                // *******************************************
+                
+                topic.subscribe("SWIPE_READY", function(){
+                  require(['maptiks'], function (mapWrapper) {
+                    for (var i=0;i<app.maps.length;i++) {
+                      var container = app.maps[i].container;
+                      console.log(app.maps[i].id);
+                      var maptiksMapOptions = {
+                          extent: app.maps[i].extent,
+                          maptiks_trackcode: app.data.getWebAppData().values.maptiks.maptiksTrackcode, // from Builder map options
+                          maptiks_id: app.data.getWebAppData().values.maptiks.maptiksId + ":" + app.maps[i].id // from Builder map options, ID:mapID
+                      };
+                      mapWrapper(container, maptiksMapOptions, app.maps[i]);
+                    }
+                  });
+                });
+              
+                // *******************************************
+                // **** Maptiks Changes done
+                // *******************************************
+              
 				// Do not allow builder under IE 9
 				if(app.isInBuilderMode && has("ie") && has("ie") < 9) {
 					_core.initError("noBuilderIE8");
