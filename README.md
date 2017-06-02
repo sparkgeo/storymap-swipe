@@ -18,6 +18,7 @@ For more infomation about using and customizing Esri's Storytelling Apps follow 
 Help content:
  * [Introduction](#introduction)
  * [How to deploy a Swipe application](#how-to-deploy-a-swipe-application)
+ * [Maptiks integration](#maptiks-integration)
  * [FAQ](#faq)
  * [Feedback](#feedback)
  * [Issues](#issues)
@@ -99,6 +100,43 @@ More customization are accessible through three files :
 	- **COLORS**: header and panel background colors
     - **bingMapsKey**: if the map uses data from Bing Maps, enter your Bing Maps Key
     
+## Maptiks integration
+
+1. Add the Maptiks wrapper as a package alias in `index.html`:
+
+    ```
+    var dojoConfig = {
+        // ...
+        aliases: [
+            // ...
+            ['maptiks', '//cdn.maptiks.com/esri3/mapWrapper.js']
+        ]
+    };
+    ```
+2. Story map applications provide [dojo/topics](https://dojotoolkit.org/reference-guide/1.9/dojo/topic.html) (global events), that we can subscribe to in order to monitor the application life cycle. One such topic is "SWIPE_READY", which fires when the application loads. By listening to this event within `MainView.js`, we ensure that Maptiks monitors the current map.
+
+    Story map applications also provide helper functions, within the "app" global variable, which stores information about the app, including settings specified by the author within the application builder. Below, we use app variable to determine the current map div and extent, as well as Maptiks parameters entered by the author in the application builder. If the builder UI is unnecessary, these values may be hard-coded in development.
+
+    See the [Developer guide](#developer-guide) for more information about topics and helper functions.
+    
+    Finally, require the Maptiks package and create the mapWrapper object, which will communicate with Maptiks using the trackcode associated with your domain and ID of your choice.
+
+    ```
+    topic.subscribe("SWIPE_READY", function(){
+      require(['maptiks'], function (mapWrapper) {
+        for (var i=0;i<app.maps.length;i++) {
+          var container = app.maps[i].container;
+          var maptiksMapOptions = {
+              extent: app.maps[i].extent,
+              maptiks_trackcode: app.data.getWebAppData().values.maptiks.maptiksTrackcode, // from Builder map options
+              maptiks_id: app.data.getWebAppData().values.maptiks.maptiksId + ":" + app.maps[i].id // from Builder map options, ID:mapID
+          };
+          mapWrapper(container, maptiksMapOptions, app.maps[i]);
+        }
+      });
+    });
+    ```
+
 ## FAQ
 
 ### Is the template compatible with previous version?
