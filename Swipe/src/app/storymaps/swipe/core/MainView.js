@@ -70,7 +70,6 @@ define(["dojo/dom-construct",
                   require(['maptiks'], function (mapWrapper) {
                     for (var i=0;i<app.maps.length;i++) {
                       var container = app.maps[i].container;
-                      console.log(app.maps[i].id);
                       var maptiksMapOptions = {
                           extent: app.maps[i].extent,
                           maptiks_trackcode: app.data.getWebAppData().values.maptiks.maptiksTrackcode, // from Builder map options
