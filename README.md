@@ -123,17 +123,19 @@ More customization are accessible through three files :
 
     ```
     topic.subscribe("SWIPE_READY", function(){
-      require(['maptiks'], function (mapWrapper) {
-        for (var i=0;i<app.maps.length;i++) {
-          var container = app.maps[i].container;
-          var maptiksMapOptions = {
-              extent: app.maps[i].extent,
-              maptiks_trackcode: app.data.getWebAppData().values.maptiks.maptiksTrackcode, // from Builder map options
-              maptiks_id: app.data.getWebAppData().values.maptiks.maptiksId + ":" + app.maps[i].id // from Builder map options, ID:mapID
-          };
-          mapWrapper(container, maptiksMapOptions, app.maps[i]);
-        }
-      });
+      if (app.data.getWebAppData().values.maptiks) {
+        require(['maptiks'], function (mapWrapper) {
+          for (var i=0;i<app.maps.length;i++) {
+            var container = app.maps[i].container;
+            var maptiksMapOptions = {
+                extent: app.maps[i].extent,
+                maptiks_trackcode: app.data.getWebAppData().values.maptiks.maptiksTrackcode, // from Builder map options
+                maptiks_id: app.data.getWebAppData().values.maptiks.maptiksId + ":" + app.maps[i].id // from Builder map options, ID:mapID
+            };
+            mapWrapper(container, maptiksMapOptions, app.maps[i]);
+          }
+        });
+      }
     });
     ```
 
