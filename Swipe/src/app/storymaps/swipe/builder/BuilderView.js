@@ -12,6 +12,7 @@ define(["storymaps/swipe/core/WebApplicationData",
 		"storymaps/builder/SettingsPopupTabColors",
 		"storymaps/builder/SettingsPopupTabHeader",
 		"storymaps/builder/SettingsPopupTabExtent",
+        "storymaps/builder/SettingsPopupTabMaptiks",
 		"dojo/topic"],
 	function (
 		WebApplicationData,
@@ -27,6 +28,7 @@ define(["storymaps/swipe/core/WebApplicationData",
 		SettingsPopupTabColors,
 		SettingsPopupTabHeader,
 		SettingsPopupTabExtent,
+        SettingsPopupTabMaptiks,
 		topic)
 	{
 		return function BuilderView()
@@ -63,7 +65,7 @@ define(["storymaps/swipe/core/WebApplicationData",
 					new SettingsPopupTabColors(_tabsBar.eq(4), _tabContent.eq(4), params.colorSchemes),
 					new SettingsPopupTabHeader(_tabsBar.eq(5), _tabContent.eq(5), params.defaultLogoURL),
 					new SettingsPopupTabExtent(_tabsBar.eq(6), _tabContent.eq(6)),
-
+                    new SettingsPopupTabMaptiks(_tabsBar.eq(7), _tabContent.eq(7))
 				];
 			}
 
@@ -108,7 +110,10 @@ define(["storymaps/swipe/core/WebApplicationData",
 						},
 						{
 							extent: Helper.getWebMapExtentFromItem(app.data.getWebMapItem().item)
-						}
+						},
+                        {
+                            maptiks: WebApplicationData.getMaptiks()
+                        }
 					]
 				);
 
@@ -169,6 +174,9 @@ define(["storymaps/swipe/core/WebApplicationData",
 					app.data.initialExtentHasBeenEdited = true;
 				}
 
+                // Maptiks
+                WebApplicationData.setMaptiks(data.settings[7]);
+              
 				if( layoutBeforeSave == "swipe" )
 					app.mapSwipe.updateSettings(WebApplicationData.getPopupColors(), WebApplicationData.getPopupTitles());
 				else

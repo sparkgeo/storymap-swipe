@@ -1,0 +1,62 @@
+#settings-maptiks p {
+	margin-bottom: 20px;
+}
+
+#settings-maptiks img {
+	float:right;
+	max-width: 250px;
+	max-height: 50px;
+}
+
+#settings-maptiks .form1 .controls {
+	float:left;
+	margin-left:65px;
+	width: 290px;
+}
+
+#settings-maptiks .form2 .control-label {
+	width: 50px;
+}
+
+#settings-maptiks .form2 .control-group {
+	margin-bottom: 10px;
+}
+
+#settings-maptiks .form2 .control-group:nth-child(2) {
+	margin-bottom: 0px;
+}
+
+#settings-maptiks .form2 .controls {
+	margin-left: 65px;
+}
+
+#settings-maptiks .form2 .socialConfig {
+	position: absolute;
+	left: 370px;
+	margin-top: -2px;
+}
+
+#settings-maptiks .form2 .socialConfig label.disabled {
+	opacity: 0.5;
+}
+
+#settings-maptiks #maptiksSimulator {
+	padding: 5px 5px 0px 0px;
+	float:left;
+	width:140px;
+	height:55px;
+	background-color:#666;
+}
+
+#settings-maptiks .optionsLogoCustom {
+	margin-left: 25px;
+}
+
+#settings-maptiks #logoTargetInput {
+	margin-top:10px;
+	display:block;
+}
+
+#settings-colors .sp-input-container {
+	height: 16px !important;
+}

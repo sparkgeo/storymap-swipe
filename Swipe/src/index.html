@@ -36,7 +36,7 @@
 			//--------------------------------
 			//     Template configuration
 			//--------------------------------
-			configOptions = {
+            configOptions = {
 				//----------------------------------
 				// Swipe App Id
 				//----------------------------------
@@ -45,14 +45,14 @@
 				// Web map id and application id can be dynamically specified through url parameters (webmap and appid)
 				// if the authorizedOwners property is specified (see below).
 				// If an application id is specified, the webmap configuration isn't used.
-				appid: "",
+				appid: "6e7fa0cd1e04486485e30d20ef6d59ee",
 				//----------------------------------
 				// Swipe Layer
 				//----------------------------------
 				// Choose to swipe between two webmaps or between the layer of a single webmap
 				// can be overridden by using webmap= in URL
 				// e.g: ["WEBMAP_ID"] OR ["WEBMAP_ID_1", "WEBMAP_ID_2"]
-				webmaps: ["62702544d70648e593bc05d65180fd64"],
+                webmaps: "",
 				// If using one webmap, enter the layer index of the layer to be revealed.
 				// Index is defined by the web map table of contents (0 is the top layer).
 				layerIndex: 1,
@@ -222,6 +222,7 @@
 				loadCSS("app/storymaps/builder/SettingsPopupTabColors.css");
 				loadCSS("app/storymaps/builder/SettingsPopupTabHeader.css");
 				loadCSS("app/storymaps/builder/SettingsPopupTabExtent.css");
+                loadCSS("app/storymaps/builder/SettingsPopupTabMaptiks.css");
 				loadCSS("app/storymaps/ui/SelectMapWidget/browse-dialog/css/browse-dialog.css");
 
 				loadCSS("app/storymaps/swipe/ui/mobile/MobileSwipeView.css");
@@ -249,7 +250,8 @@
 					}
 				],
 				aliases: [
-					['text', 'lib-build/text']
+					['text', 'lib-build/text'],
+                    ['maptiks', '//cdn.maptiks.com/esri3/mapWrapper.js']
 				]
 			};
 			var urlLocale = location.search.match(/locale=([\w\-]+)/) ? RegExp.$1 : null;
@@ -497,6 +499,7 @@
 				<div class="tab"></div>
 				<div class="tab"></div>
 				<div class="tab"></div>
+                <div class="tab"></div>
 			</div>
 			<div class="modal-body">
 				<!-- Layout -->
@@ -593,6 +596,23 @@
 					<div class="explain2"></div>
 					<div class="dateLineError"></div>
 				</div>
+              
+                <!-- Maptiks-->
+                <div id="settings-maptiks" class="tab-content">
+                    <form class="form-horizontal">
+                        <p></p>
+                        <div class="control-group" style="margin-bottom: 5px">
+                          <label class="control-label" for="maptiks-trackcode"></label>
+                          <div class="controls">
+                              <input type="text" class="input-sm" id="maptiks-trackcode" />
+                          </div>
+                          <label class="control-label" for="maptiks-id"></label>
+                          <div class="controls">
+                                <input type="text" class="input-sm" id="maptiks-id" />
+                          </div>
+                        </div>
+                    </form>
+                </div>
 			</div>
 			<div class="modal-footer">
 				<span class="error"></span>
