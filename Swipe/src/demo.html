@@ -62,7 +62,6 @@
               mapWrapper(container, maptiksMapOptions, curMap);
               
               var esriExtent = curMap.geographicExtent;
-              console.log(esriExtent);
               var leafletExtent = L.latLngBounds([L.latLng(esriExtent.ymin, esriExtent.xmin),L.latLng(esriExtent.ymax, esriExtent.xmax)]);
 
               Lmap.fitBounds(leafletExtent);
