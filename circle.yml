@@ -53,7 +53,7 @@ deployment:
     commands:
       - find . -name 'demo.html' -exec sed -i 's/c311cf16-ad79-42b1-97f9-f433be6c8b00/c28cbfab-8f6a-4cc3-abe8-9209dcf5ec93/g' {} +
       - find . -name 'index.html' -exec sed -i 's/cdn.maptiks.com/cdn-dev.maptiks.com/g' {} +
-      - aws s3 sync Swipe/deploy/ s3://templates-dev.maptiks.com/Swipe/ --delete --quiet
+      - aws s3 sync Swipe/deploy/ s3://templates-dev.maptiks.com/Swipe/ --delete
       - >
         curl -X DELETE "https://api.cloudflare.com/client/v4/zones/34e8519f80106c3699e76002b4153ce5/purge_cache"
         -H "X-Auth-Email: will@sparkgeo.com"
