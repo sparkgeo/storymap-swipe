@@ -3,6 +3,7 @@ define(['dojo/topic'],
     topic.subscribe("SWIPE_READY", function() {
       require(['maptiks'], function (mapWrapper) {
         var appMaps = app.maps.length > 0 ? app.maps : [app.map];
+        console.log(appMaps);
         for (var i=0;i<appMaps.length;i++) {
           if (app.data.getWebAppData().values.maptiks) {
             var container = appMaps[i].container;
