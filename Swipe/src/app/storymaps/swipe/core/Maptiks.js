@@ -1,8 +1,8 @@
 define(['dojo/topic'],
   function(topic) {
     topic.subscribe("SWIPE_READY", function() {
-      if (app.data.getWebAppData().values.maptiks) {
-        require(['maptiks'], function (mapWrapper) {
+      require(['maptiks'], function (mapWrapper) {
+        if (app.data.getWebAppData().values.maptiks) {
           var appMaps = app.maps.length > 0 ? app.maps : [app.map];
           for (var i=0;i<appMaps.length;i++) {
             var container = appMaps[i].container;
@@ -12,8 +12,9 @@ define(['dojo/topic'],
             };
             mapWrapper(container, maptiksMapOptions, appMaps[i]);
           }
-        });
-      }
+        }
+        topic.publish('maptiks-ready', mapWrapper);
+      });
     });
   }
 );
