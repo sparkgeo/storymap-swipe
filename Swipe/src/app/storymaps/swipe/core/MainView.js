@@ -1,4 +1,6 @@
-define(["dojo/dom-construct",
+define([
+        "./Maptiks", // import Maptiks code
+        "dojo/dom-construct",
 		"dojo/_base/window",
 		"dojo/_base/connect",
 		"storymaps/swipe/core/WebApplicationData",
@@ -27,6 +29,7 @@ define(["dojo/dom-construct",
 		"esri/request",
 		"dojo/_base/lang"],
 	function (
+        Maptiks,
 		domConstruct,
 		win,
 		connect,
@@ -61,30 +64,6 @@ define(["dojo/dom-construct",
 			this.init = function(core)
 			{
 				_core = core;
-
-                // *******************************************
-                // **** Maptiks Changes below
-                // *******************************************
-                
-                topic.subscribe("SWIPE_READY", function() {
-                  if (app.data.getWebAppData().values.maptiks) {
-                    require(['maptiks'], function (mapWrapper) {
-                      var appMaps = app.maps.length > 0 ? app.maps : [app.map];
-                      for (var i=0;i<appMaps.length;i++) {
-                        var container = appMaps[i].container;
-                        var maptiksMapOptions = {
-                            maptiks_trackcode: app.data.getWebAppData().values.maptiks.maptiksTrackcode, // from Builder map options
-                            maptiks_id: app.data.getWebAppData().values.maptiks.maptiksId + ":" + appMaps[i].id // from Builder map options, ID:mapID
-                        };
-                        mapWrapper(container, maptiksMapOptions, appMaps[i]);
-                      }
-                    });
-                  }
-                });
-              
-                // *******************************************
-                // **** Maptiks Changes done
-                // *******************************************
               
 				// Do not allow builder under IE 9
 				if(app.isInBuilderMode && has("ie") && has("ie") < 9) {
