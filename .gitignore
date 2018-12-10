@@ -1,5 +1,7 @@
 Swipe/deploy/*
 Swipe/node_modules/
+deploy/
+node_modules/
 
 #################
 ## Eclipse

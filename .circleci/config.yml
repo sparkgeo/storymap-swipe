@@ -11,13 +11,17 @@ jobs:
     <<: *defaults
     steps:
       - checkout
+      - run:
+          name: cd into folder
+          command: cd Swipe
+
       - restore_cache:
-          key: v1-npm-{{ checksum "Swipe/package.json" }}
+          key: v1-npm-{{ checksum "package.json" }}
       - run:
           name: Install NPM Dependencies
-          command: ls Swipe/node_modules || cd Swipe && npm i && npm i grunt-cli
+          command: ls node_modules || npm i && npm i grunt-cli
       - save_cache:
-          key: v1-npm-{{ checksum "Swipe/package.json" }}
+          key: v1-npm-{{ checksum "package.json" }}
           paths:
             - node_modules
 
@@ -25,7 +29,10 @@ jobs:
           key: v1-dist-{{ .Environment.CIRCLE_SHA1 }}
       - run:
           name: Build
-          command: ls Swipe/deploy || node Swipe/node_modules/grunt-cli/bin/grunt
+          command: ls Swipe/deploy/index.html || cd Swipe && node node_modules/grunt-cli/bin/grunt
+      - run:
+          name: Copy deploy folder
+          command: ls deploy || (mkdir deploy && cp -R Swipe/deploy/* deploy/)
       - save_cache:
           key: v1-dist-{{ .Environment.CIRCLE_SHA1 }}
           paths:
@@ -59,7 +66,7 @@ jobs:
             find . -name 'demo.html' -exec sed -i 's/c311cf16-ad79-42b1-97f9-f433be6c8b00/92802626-2640-4f09-9121-6a0292cf012e/g' {} +
       - run:
           name: deploy to aws
-          command: aws s3 sync Swipe/deploy/ s3://templates.maptiks.com/Swipe/ --delete --quiet
+          command: aws s3 sync deploy/ s3://templates.maptiks.com/Swipe/ --delete --quiet
       - run:
           name: clear cloudflare cache
           command: |
@@ -77,7 +84,7 @@ jobs:
             find . -name 'main-config.js' -exec sed -i 's/cdn.maptiks.com/cdn-staging.maptiks.com/g' {} +
       - run:
           name: deploy to aws
-          command: aws s3 sync Swipe/deploy/ s3://templates-staging.maptiks.com/Swipe/ --delete --quiet
+          command: aws s3 sync deploy/ s3://templates-staging.maptiks.com/Swipe/ --delete --quiet
       - run:
           name: clear cloudflare cache
           command: |
@@ -95,7 +102,7 @@ jobs:
             find . -name 'main-config.js' -exec sed -i 's/cdn.maptiks.com/cdn-dev.maptiks.com/g' {} +
       - run:
           name: deploy to aws
-          command: aws s3 sync Swipe/deploy/ s3://templates-dev.maptiks.com/Swipe/ --delete --quiet
+          command: aws s3 sync deploy/ s3://templates-dev.maptiks.com/Swipe/ --delete --quiet
       - run:
           name: clear cloudflare cache
           command: |
