@@ -12,12 +12,12 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: v1-npm-{{ cd Swipe && checksum "package.json" }}
+          key: v1-npm-{{ checksum "Swipe/package.json" }}
       - run:
           name: Install NPM Dependencies
           command: cd Swipe && ls node_modules || cd Swipe && npm i && npm i grunt-cli
       - save_cache:
-          key: v1-npm-{{ cd Swipe && checksum "package.json" }}
+          key: v1-npm-{{ checksum "Swipe/package.json" }}
           paths:
             - node_modules
 
