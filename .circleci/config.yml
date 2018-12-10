@@ -11,25 +11,14 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-      - run:
-          name: cd into folder
-          command: cd Swipe
-
-      - restore_cache:
-          key: v1-npm-{{ checksum "package.json" }}
-      - run:
-          name: Install NPM Dependencies
-          command: ls node_modules || npm i && npm i grunt-cli
-      - save_cache:
-          key: v1-npm-{{ checksum "package.json" }}
-          paths:
-            - node_modules
-
       - restore_cache:
           key: v1-dist-{{ .Environment.CIRCLE_SHA1 }}
       - run:
+          name: Install NPM Dependencies
+          command: ls deploy || cd Swipe && npm i && npm i grunt-cli
+      - run:
           name: Build
-          command: ls Swipe/deploy/index.html || cd Swipe && node node_modules/grunt-cli/bin/grunt
+          command: ls deploy || cd Swipe && node node_modules/grunt-cli/bin/grunt
       - run:
           name: Copy deploy folder
           command: ls deploy || (mkdir deploy && cp -R Swipe/deploy/* deploy/)
