@@ -15,7 +15,7 @@ jobs:
           key: v1-npm-{{ checksum "Swipe/package.json" }}
       - run:
           name: Install NPM Dependencies
-          command: cd Swipe && ls node_modules || cd Swipe && npm i && npm i grunt-cli
+          command: ls Swipe/node_modules || cd Swipe && npm i && npm i grunt-cli
       - save_cache:
           key: v1-npm-{{ checksum "Swipe/package.json" }}
           paths:
@@ -25,7 +25,7 @@ jobs:
           key: v1-dist-{{ .Environment.CIRCLE_SHA1 }}
       - run:
           name: Build
-          command: cd Swipe && ls deploy || cd Swipe && node node_modules/grunt-cli/bin/grunt
+          command: ls Swipe/deploy || cd Swipe && node node_modules/grunt-cli/bin/grunt
       - save_cache:
           key: v1-dist-{{ .Environment.CIRCLE_SHA1 }}
           paths:
