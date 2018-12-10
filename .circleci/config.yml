@@ -1,0 +1,144 @@
+version: 2
+
+defaults: &defaults
+  docker:
+    - image: sparkgeo/base:circleci
+  working_directory: ~/project
+
+jobs:
+
+  build:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          key: v1-npm-{{ checksum "package.json" }}
+      - run:
+          name: Install NPM Dependencies
+          command: cd Swipe && ls node_modules || cd Swipe && npm i && npm i grunt-cli
+      - save_cache:
+          key: v1-npm-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+
+      - restore_cache:
+          key: v1-dist-{{ .Environment.CIRCLE_SHA1 }}
+      - run:
+          name: Build
+          command: cd Swipe && ls deploy || cd Swipe && node node_modules/grunt-cli/bin/grunt
+      - save_cache:
+          key: v1-dist-{{ .Environment.CIRCLE_SHA1 }}
+          paths:
+            - deploy
+
+  reset-master:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Resetting master to $CIRCLE_TAG
+          command: |
+            git config user.email "alain+sparkgeobot@sparkgeo.com"
+            git config user.name "SparkgeoBot"
+            git push origin ${CIRCLE_SHA1:0:7}:master
+      - run:
+          name: Merge $CIRCLE_TAG into develop
+          command: |
+            git checkout origin/develop
+            git merge ${CIRCLE_SHA1:0:7} -m "Merge ${CIRCLE_TAG} into develop"
+            git push origin HEAD:develop
+
+  deploy-prod:
+    <<: *defaults
+    steps:
+      - restore_cache:
+          key: v1-dist-{{ .Environment.CIRCLE_SHA1 }}
+      - run:
+          name: Envir Injection
+          command: |
+            find . -name 'demo.html' -exec sed -i 's/c311cf16-ad79-42b1-97f9-f433be6c8b00/92802626-2640-4f09-9121-6a0292cf012e/g' {} +
+      - run:
+          name: deploy to aws
+          command: aws s3 sync Swipe/deploy/ s3://templates.maptiks.com/Swipe/ --delete --quiet
+      - run:
+          name: clear cloudflare cache
+          command: |
+            curl -X DELETE "https://api.cloudflare.com/client/v4/zones/34e8519f80106c3699e76002b4153ce5/purge_cache" -H "X-Auth-Email: will@sparkgeo.com" -H "X-Auth-Key: $CF_KEY" -H "Content-Type: application/json" --data '{"purge_everything": true}'
+
+  deploy-staging:
+    <<: *defaults
+    steps:
+      - restore_cache:
+          key: v1-dist-{{ .Environment.CIRCLE_SHA1 }}
+      - run:
+          name: Envir Injection
+          command: |
+            find . -name 'demo.html' -exec sed -i 's/c311cf16-ad79-42b1-97f9-f433be6c8b00/f3abdf3b-1b2b-4631-a2b7-5201b5b6d66f/g' {} +
+            find . -name 'main-config.js' -exec sed -i 's/cdn.maptiks.com/cdn-staging.maptiks.com/g' {} +
+      - run:
+          name: deploy to aws
+          command: aws s3 sync Swipe/deploy/ s3://templates-staging.maptiks.com/Swipe/ --delete --quiet
+      - run:
+          name: clear cloudflare cache
+          command: |
+            curl -X DELETE "https://api.cloudflare.com/client/v4/zones/34e8519f80106c3699e76002b4153ce5/purge_cache" -H "X-Auth-Email: will@sparkgeo.com" -H "X-Auth-Key: $CF_KEY" -H "Content-Type: application/json" --data '{"purge_everything": true}'
+
+  deploy-dev:
+    <<: *defaults
+    steps:
+      - restore_cache:
+          key: v1-dist-{{ .Environment.CIRCLE_SHA1 }}
+      - run:
+          name: Envir Injection
+          command: |
+            find . -name 'demo.html' -exec sed -i 's/c311cf16-ad79-42b1-97f9-f433be6c8b00/c28cbfab-8f6a-4cc3-abe8-9209dcf5ec93/g' {} +
+            find . -name 'main-config.js' -exec sed -i 's/cdn.maptiks.com/cdn-dev.maptiks.com/g' {} +
+      - run:
+          name: deploy to aws
+          command: aws s3 sync Swipe/deploy/ s3://templates-dev.maptiks.com/Swipe/ --delete --quiet
+      - run:
+          name: clear cloudflare cache
+          command: |
+            curl -X DELETE "https://api.cloudflare.com/client/v4/zones/34e8519f80106c3699e76002b4153ce5/purge_cache" -H "X-Auth-Email: will@sparkgeo.com" -H "X-Auth-Key: $CF_KEY" -H "Content-Type: application/json" --data '{"purge_everything": true}'
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build:
+          context: org-global
+          filters:
+            tags:
+              only: /.*/
+      - deploy-prod:
+          requires:
+            - build
+          context: org-global
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /v[0-9]+(\.[0-9]+)+/
+      - deploy-staging:
+          requires:
+            - build
+          context: org-global
+          filters:
+            branches:
+              only: /rc[0-9]+(\.[0-9]+)+/
+      - deploy-dev:
+          requires:
+            - build
+          context: org-global
+          filters:
+            branches:
+              only: develop
+      - reset-master:
+          context: org-global
+          requires:
+            - deploy-prod
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /v[0-9]+(\.[0-9]+)+/
