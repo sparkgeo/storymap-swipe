@@ -15,7 +15,7 @@ jobs:
           key: v1-dist-{{ .Environment.CIRCLE_SHA1 }}
       - run:
           name: Install NPM Dependencies
-          command: ls deploy || (cd Swipe && npm i && npm i grunt-cli)
+          command: ls deploy || (cd Swipe && npm i --no-save && npm i --no-save grunt-cli)
       - run:
           name: Build
           command: ls deploy || (cd Swipe && node node_modules/grunt-cli/bin/grunt)
