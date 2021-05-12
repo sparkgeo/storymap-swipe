@@ -43,15 +43,34 @@ define({
       "navRight": "데이터"
     },
     "desktopView": {
-      "storymapsText": "스토리 맵",
+      "storymapsText": "스토리맵",
       "builderButton": "빌더 모드로 전환",
-      "facebookTooltip": "Facebook에  공유",
+      "facebookTooltip": "Facebook에 공유",
       "twitterTooltip": "Twitter에 공유",
       "bitlyTooltip": "짧은 링크 가져오기",
       "tooltipAutoplayDisabled": "자동 재생 모드에서는 사용할 수 없습니다.",
       "autoplayLabel": "자동 재생 모드",
       "autoplayExplain1": "자동 재생 모드를 사용하면 스토리가 주기적으로 진행됩니다. 이 기능은 키오스크 또는 공공의 디스플레이 모니터에는 적합하지만 그 이외의 환경에서는 스토리 읽기가 더욱 어려워질 수 있습니다. 소형 디스플레이에서는 이 기능이 지원되지 않습니다.",
       "autoplayExplain2": "이 모드가 활성화되면 스토리를 재생/일시정지하고 탐색 속도를 조정하는 컨트롤이 나타납니다."
+    },
+    "bannerNotification": {
+      "learnMore": "자세한 정보",
+      "close": "닫기",
+      "dontShowAgain": "이 메시지를 다시 표시 안 함"
+    },
+    "httpsTransitionMessage": {
+      "bannerMsg": "웹 보안 및 스토리맵에 대한 중요 메시지",
+      "s1h1": "Esri는 스토리맵의 보안을 지속적으로 강화하고 있습니다.",
+      "s1p1": "스토리맵은 웹에서 실행되며 웹 커뮤니티는 더 강화된 보안을 설정하고 구현하기 위해 항상 노력하고 있습니다. 인터넷을 통해 전송되는 콘텐츠의 보안 연결을 제공하는 HTTPS는 웹 콘텐츠에 접근하는 필수 방법으로 부각되고 있어, 현재 대부분의 최신 브라우저에서는 HTTPS가 아닌 HTTP를 사용하는 경우 경고 메시지가 표시됩니다. 이 새로운 표준을 따라 2018년 6월 ArcGIS Online 업데이트부터는 스토리맵에서 HTTPS를 사용해야 합니다.",
+      "s1p2": "이는 스토리맵의 모든 콘텐츠가 HTTP가 아닌 HTTPS로 시작하는 링크를 사용하여 접근해야 함을 의미합니다(이미지, 레이어, 임베드된 앱, 웹 사이트). HTTPS를 사용하면 대부분의 웹 브라우저에서 내 스토리가 안전한 것으로 나타나므로 독자에게 최상의 환경이 제공됩니다.",
+      "s2h1": "해야 할 일",
+      "s2p1": "Esri는 스토리맵 작성자와 독자가 쉽게 HTTPS로 전환할 수 있도록 노력하고 있습니다. 이제, 스토리맵 빌더 및 내 스토리에서 스토리 내 안전하지 않은 콘텐츠(HTTP)를 찾고 이를 해결하기 위한 권장 사항을 제시하는 도구를 제공합니다. 내 스토리에서 안전하지 않은 콘텐츠를 확인하고 2018년 6월 전에 HTTPS로 업데이트하세요.",
+      "action1": "닫기",
+      "action2": "내 스토리 지금 확인",
+      "action3": "자세한 정보"
+    },
+    "licenseChange2018": {
+      "noAccess": "귀하의 계정(%USER_NAME%)에는 공개 상태가 아닌 스토리맵을 열 수 있는 라이선스가 없습니다. 스토리맵 또는 애드온 필수 앱 라이선스가 포함된 사용자 유형을 업무 지시하려면 기관 관리자에게 문의하세요."
     }
   },
   "builder": {
@@ -97,17 +116,17 @@ define({
     "settingsColors": {
       "settingsTabColor": "테마",
       "settingsColorExplain": "앱 테마를 선택하거나 사용자 고유의 색상을 정의합니다.",
-      "settingsLabelColor": "헤더 및 사이드 패널 배경 색상"
+      "settingsLabelColor": "머리글 및 측면 패널 배경 색상"
     },
     "settingsHeader": {
-      "settingsTabLogo": "헤더",
-      "settingsLogoExplain": "머리글 로고를 사용자 지정합니다(최대 250x50 픽셀).",
+      "settingsTabLogo": "머리글",
+      "settingsLogoExplain": "머리글 로고를 사용자 지정합니다(최대 250x50 px).",
       "settingsLogoEsri": "Esri 로고",
       "settingsLogoNone": "로고 없음",
       "settingsLogoCustom": "사용자 지정 로고",
       "settingsLogoCustomPlaceholder": "이미지 URL",
       "settingsLogoCustomTargetPlaceholder": "클릭 이동 링크",
-      "settingsLogoSocialExplain": "머리글 오른쪽 상단 링크를 사용자 정의합니다.",
+      "settingsLogoSocialExplain": "머리글 우측 상단 링크를 사용자 정의합니다.",
       "settingsLogoSocialText": "텍스트",
       "settingsLogoSocialLink": "링크",
       "settingsLogoSocialDisabled": "이 기능은 관리자가 사용하지 않도록 설정했습니다."
@@ -122,6 +141,9 @@ define({
       "settingsExtentModifyBtn": "현재 범위 편집",
       "settingsExtentApplyBtn": "기본 맵에 적용",
       "settingsExtentUseMainMap": "기본 맵 범위 사용"
+    },
+    "storyTellerUserType": {
+      "notCreatorError": "계정(%USER_NAME%)에는 클래식 스토리맵 빌더를 사용할 수 있는 라이선스가 없습니다. Creator 사용자 유형 할당을 기관 관리자에게 요청하세요."
     }
   },
   "swipe": {
@@ -135,7 +157,7 @@ define({
       "noLegend": "표시할 범례가 없습니다."
     },
     "swipeSidePanel": {
-      "editTooltip": "사이드 패널 설명을 설정합니다.",
+      "editTooltip": "측면 패널 설명을 설정합니다.",
       "editMe": "편집!",
       "legendTitle": "범례"
     },
@@ -186,11 +208,11 @@ define({
       "settingsLocationSearchEnable": "로케이터 검색 사용",
       "settingsGeolocatorEnable": "지오로케이터 사용",
       "settingsLegendHelpContent": "범례 콘텐츠를 세부 조정하려면 ArcGIS 웹 맵 뷰어 목차(범례에서 숨겨짐)를 사용하세요.",
-      "settingsSeriesHelpContent": "스와이프 계열은 뷰어를 특정 범위로 안내하고 사이드 패널에 제목 및 설명 텍스트를 표시하는 탭이 지정된 탐색 옵션입니다. 초기 활성화 중에 웹 맵의 책갈피를 가져오며 이를 통해 계열 모음이 미리 채워집니다. 계열 옵션을 비활성화하면 계열 모음이 꺼지지만 계열 구성은 나중에 사용할 수 있도록 유지됩니다.",
-      "settingsSeriesHelpContent2": "스와이프 계열을 사용하면 선택한 위치 및 함께 제공되는 제목과 텍스트를 생성하고 편집할 수 있습니다. 웹 맵에 책갈피가 있으면 책갈피가 표시됩니다. 계열을 비활성화할 수도 있지만 구성은 나중에 사용할 수 있도록 유지됩니다.",
+      "settingsSeriesHelpContent": "스와이프 계열은 뷰어를 특정 범위로 안내하고 측면 패널에 제목 및 설명 텍스트를 표시하는 탭이 지정된 탐색 옵션입니다. 초기 활성화 중에 웹 맵의 북마크를 가져오며 이를 통해 계열 모음이 미리 채워집니다. 계열 옵션을 비활성화하면 계열 모음이 꺼지지만 계열 구성은 나중에 사용할 수 있도록 유지됩니다.",
+      "settingsSeriesHelpContent2": "스와이프 계열을 사용하면 선택한 위치 및 함께 제공되는 제목과 텍스트를 생성하고 편집할 수 있습니다. 웹 맵에 북마크가 있으면 북마크가 표시됩니다. 계열을 비활성화할 수도 있지만 구성은 나중에 사용할 수 있도록 유지됩니다.",
       "settingsSeriesHelpLink": "스와이프 계열이 포함된 응용프로그램 예제 확인",
       "preview": "UI 미리보기",
-      "settingsLocateButtonExplain": "이 기능은 대부분의 모바일 장치와 데스크탑 브라우저(Internet Explorer 9 이상 포함)에서 지원됩니다.",
+      "settingsLocateButtonExplain": "대부분의 브라우저에서 지원됩니다. 스토리맵이 HTTPS를 통해서 접근된 경우에만 나타나며 스토리가 내장된 경우에는 나타나지 않습니다.",
       "settingsLocateButton": "지원되는 브라우저에서 '찾기' 버튼 사용",
       "settingsAddressSearch": "주소 검색 도구 사용"
     },
@@ -213,9 +235,9 @@ define({
     "seriesPanel": {
       "title": "제목",
       "descr": "설명",
-      "discard": "책갈피 취소",
-      "saveExtent": "책갈피 범위 설정",
-      "discardDisabled": "책갈피를 제거할 수 없습니다. 스와이프 계열이 설정에서 사용하지 않도록 설정되어 있을 수 있습니다."
+      "discard": "북마크 취소",
+      "saveExtent": "북마크 범위 설정",
+      "discardDisabled": "북마크를 제거할 수 없습니다. 스와이프 계열이 설정에서 사용하지 않도록 설정되어 있을 수 있습니다."
     },
     "helpPopup": {
       "title": "도움말",
@@ -223,7 +245,7 @@ define({
       "tab1": {
         "div1": "스와이프/망원경 템플릿은 스마트폰과 태블릿을 비롯한 모든 장치의 모든 웹 브라우저에서 사용 가능한 간편하고 효율적인 웹 응용프로그램에서 단일 웹 맵의 두 레이어 또는 두 개별 웹 맵을 비교하도록 설계되었습니다.",
         "div2": "사용자가 생성한 예시를 비롯하여 스와이프/투과 렌즈 템플릿에 대한 추가 정보를 확인하려면 <a href='https://storymaps.arcgis.com/en/app-list/swipe-spyglass/' target='_blank'>Story Maps 웹 사이트를 방문하세요</a>. Twitter에서 <a href='https://twitter.com/EsriStoryMaps' target='_blank'>@EsriStoryMaps</a>를 팔로우할 수도 있습니다.",
-        "div3": "여러분의 참여를 기다립니다. 질문이 있거나 새 기능이 필요하거나 버그가 확인된 경우 <a href='http://links.esri.com/storymaps/forum' target='_blank'>스토리 맵 사용자 포럼</a>을 방문해 주세요."
+        "div3": "여러분의 참여를 기다립니다. 질문이 있거나 새 기능이 필요하거나 버그가 확인된 경우 <a href='http://links.esri.com/storymaps/forum' target='_blank'>스토리맵 사용자 포럼</a>을 방문해 주세요."
       }
     },
     "share": {
@@ -259,19 +281,19 @@ define({
       "mapPickHeader": "시작하려면 유효한 웹 맵 ID를 입력하거나 검색 버튼을 사용하여 웹 맵을 찾으세요.",
       "launchBuilder": "빌더 시작",
       "chooseWebmapLbl": "웹 맵을 선택합니다...",
-      "explain2": "스와이프 또는 투과 렌즈 스토리 맵을 생성하려면 아래 버튼을 사용하여 사용할 기존 웹 맵을 선택합니다. 또는 웹 맵의 ID를 아래 필드에 붙여넣을 수도 있습니다.",
-      "explain3": "스토리 맵에서 두 개의 웹 맵을 사용하려는 경우 나중에 해당 옵션을 선택할 때 두 번째 웹 맵에 대한 프롬프트가 표시됩니다.",
+      "explain2": "스와이프 또는 투과 렌즈 스토리맵을 생성하려면 아래 버튼을 사용하여 사용할 기존 웹 맵을 선택합니다. 또는 웹 맵의 ID를 아래 필드에 붙여넣을 수도 있습니다.",
+      "explain3": "스토리맵에서 두 개의 웹 맵을 사용하려는 경우 나중에 해당 옵션을 선택할 때 두 번째 웹 맵에 대한 프롬프트가 표시됩니다.",
       "webmapPlaceholder": "웹 맵 ID를 입력합니다..."
     },
     "saveErrorSocial": {
       "title": "소셜 미디어 공유 업데이트",
       "panel1": "소셜 미디어에서의 스토리의 외관이 향상되었지만 ArcGIS 웹 응용프로그램 항목 제목이 스토리 제목과 같지 않습니다.",
-      "panel1tooltip": "제목, 요약 및 섬네일 이미지를 정의하면 스토리가 다음과 같이 보입니다:",
+      "panel1tooltip": "제목, 요약 및 썸네일 이미지를 정의하면 스토리가 다음과 같이 보입니다:",
       "panel2": "소셜 미디어에서 사용할 제목:",
       "panel2q1": "스토리 제목(권장됨)",
       "panel2q1tooltip": "이 옵션을 선택하면 항목 제목이 스토리 제목과 일치하도록 수정되며 빌더에서의 후속 변경 사항이 동기화됩니다.",
       "panel2q2": "항목 제목",
-      "panel3": "소셜 미디어에서의 스토리의 외관을 더욱 향상시키려면 ${MYSTORIES}을(를) 사용하여 요약 및 섬네일 이미지를 추가합니다.",
+      "panel3": "소셜 미디어에서의 스토리의 외관을 더욱 향상시키려면 ${MYSTORIES}을(를) 사용하여 요약 및 썸네일 이미지를 추가합니다.",
       "panel4": "이 스토리에 대해 다시 경고 안 함",
       "mystories": "내 스토리",
       "btnSave": "저장"
@@ -291,5 +313,31 @@ define({
       "cancel": "취소",
       "placeholder": "검색어 입력"
     }
+  },
+  "httpsTransitionNotification": {
+    "s1h1": "Esri는 스토리맵의 보안을 지속적으로 강화하고 있습니다.",
+    "s1p1": "스토리맵은 웹에서 실행되며 웹 커뮤니티는 더 강화된 보안을 설정하고 구현하기 위해 항상 노력하고 있습니다. 인터넷을 통해 전송되는 콘텐츠의 보안 연결을 제공하는 HTTPS는 웹 콘텐츠에 접근하는 필수 방법으로 부각되고 있어, 현재 대부분의 최신 브라우저에서는 HTTPS가 아닌 HTTP를 사용하는 경우 경고 메시지가 표시됩니다. 이 새로운 표준을 따라 스토리맵 제작 및 공유에 HTTPS 링크를 사용하고, 웹 콘텐츠를 임베드하거나 스토리맵 내 이미지에 연결할 때 HTTPS URL만 사용하는 것을 권장합니다.",
+    "s1p2": "이는 스토리맵의 모든 콘텐츠(이미지, 레이어, 임베드된 앱, 웹 사이트)가 HTTP가 아닌 HTTPS로 시작하는 링크를 사용하여 접근해야 함을 의미합니다. HTTPS를 사용하면 대부분의 웹 브라우저에서 내 스토리가 안전한 것으로 나타나므로 독자에게 최상의 환경이 제공됩니다.",
+    "s2h1": "해야 할 일",
+    "s2p1": "Esri는 스토리맵 작성자와 독자가 쉽게 HTTPS로 전환할 수 있도록 노력하고 있습니다. 이제, 스토리맵 빌더 및 내 스토리에서 안전하지 않은 콘텐츠(HTTP)를 찾고 이를 해결하기 위한 권장 사항을 제시하는 도구가 제공됩니다. 내 스토리에서 안전하지 않은 콘텐츠를 확인하고 가능한 한 빨리 HTTPS로 업데이트하세요.",
+    "action1": "닫기",
+    "action2": "내 스토리 지금 확인",
+    "action3": "자세한 정보"
+  },
+  "embedBar": {
+    "share": "공유하기",
+    "fullScreen": "전체 화면",
+    "enlarge": "확대",
+    "newTab": "새 탭에서 열기",
+    "tagline": "스토리맵",
+    "exitFullScreen": "전체 화면 종료"
+  },
+  "june2018SurveyMessage": {
+    "bannerMsg": "요청을 드려도 될까요? 이 질문에 답변을 제공하면 향후 스토리맵을 향상시키는 데 도움이 됩니다.",
+    "s1h1": "의견을 공유하고 향후 스토리맵을 향상시키세요.",
+    "s1p1": "Esri는 귀하의 소중한 피드백을 반영하여 스토리맵을 더욱 향상시킬 수 있습니다. 이 3분 분량의 설문에 참여해 주시면 감사하겠습니다.",
+    "s2p1": "항상 Esri Story Maps를 사용해 주셔서 항상 감사드립니다!",
+    "action1": "닫기",
+    "action2": "설문 작성"
   }
 });

@@ -11,7 +11,9 @@ define(["esri/arcgis/Portal",
 		"esri/IdentityManager",
 		"esri/request",
 		"esri/geometry/Extent",
+		"esri/arcgis/utils",
 		"dojo/topic",
+		"storymaps/ui/bannerNotification/BannerNotification",
 		"dojo/on"],
 	function(
 		esriPortal,
@@ -27,7 +29,9 @@ define(["esri/arcgis/Portal",
 		IdentityManager,
 		esriRequest,
 		Extent,
+		arcgisUtils,
 		topic,
+		BannerNotification,
 		on)
 	{
 		var _core = null;
@@ -85,6 +89,49 @@ define(["esri/arcgis/Portal",
 			}));
 
 			app.cleanApp = cleanApp;
+
+			// Show https-transition notification when app loads
+			if (!app.isPortal) {
+				topic.subscribe('SWIPE_READY', function() {
+					var stringsHttps = i18n.httpsTransitionNotification;
+					new BannerNotification({
+						id: "httpsTransitionMessage",
+						bannerMsg: i18n.viewer.httpsTransitionMessage.bannerMsg,
+						mainMsgHtml: '\
+						<h2>' + stringsHttps.s1h1 + '</h2>\
+						<p>' + stringsHttps.s1p1 + '</p>\
+						<p>' + stringsHttps.s1p2 + '</p>\
+						<h2>' + stringsHttps.s2h1 + '</h2>\
+						<p>' + stringsHttps.s2p1 + '</p>\
+						',
+						actions: [
+							{
+								primary: true,
+								string: stringsHttps.action1,
+								closeOnAction: true
+							},
+							{
+								string: stringsHttps.action2,
+								action: function() {
+									window.open('https://storymaps.arcgis.com/en/my-stories/');
+								}
+							},
+							{
+								string: stringsHttps.action3,
+								action: function() {
+									window.open('https://links.esri.com/storymaps/web_security_faq');
+								}
+							}
+						],
+						cookie: {
+							domain: 'arcgis.com',
+							path: '/',
+							maxAge: 60 * 60 * 24 * 365
+						},
+						blockingNotifications: 'storymapsSurvey'
+					});
+				});
+			}
 		}
 
 		function appInitComplete()
@@ -290,7 +337,7 @@ define(["esri/arcgis/Portal",
 						text: JSON.stringify(WebApplicationData.get())
 					});
 
-					var url = portalUrl + "/sharing/content/users/" + uid + (appItem.ownerFolder ? ("/" + appItem.ownerFolder) : "");
+					var url = portalUrl + "/sharing/rest/content/users/" + uid + (appItem.ownerFolder ? ("/" + appItem.ownerFolder) : "");
 
 					// Updating
 					if ( appItem.id )
@@ -468,7 +515,7 @@ define(["esri/arcgis/Portal",
 
 				/*var saveRq = esriRequest(
 					{
-						url: portalUrl + "/sharing/content/users/" + uid + (item.ownerFolder ? ("/" + item.ownerFolder) : "") + "/addItem",
+						url: portalUrl + "/sharing/rest/content/users/" + uid + (item.ownerFolder ? ("/" + item.ownerFolder) : "") + "/addItem",
 						handleAs: 'json',
 						content: rqData
 					},
@@ -480,7 +527,7 @@ define(["esri/arcgis/Portal",
 				if (app.data.initialExtentHasBeenEdited) {
 					var saveRq = esriRequest(
 						{
-							url: portalUrl + "/sharing/content/users/" + uid + (item.ownerFolder ? ("/" + item.ownerFolder) : "") + "/addItem",
+							url: portalUrl + "/sharing/rest/content/users/" + uid + (item.ownerFolder ? ("/" + item.ownerFolder) : "") + "/addItem",
 							handleAs: 'json',
 							content: rqData
 						},
@@ -512,12 +559,12 @@ define(["esri/arcgis/Portal",
 
 			// Looks like sharing to private imply a unshareItems request first
  			// => don't use it that code to share private without more test
-			if ( sharingMode != "public" && sharingMode != "account" )
+			if ( sharingMode != "public" && sharingMode != "account" && sharingMode != "org" )
 				sharingMode = "public";
 
 			// Find items to share - only if they aren't already shared to the proper level
 			var targetItems = [];
-			if( sharingMode == "account" ) {
+			if( sharingMode == "account" || sharingMode == "org" ) {
 				if( (app.data.getWebMapItem().item.access == "private"||app.data.getWebMapItem().item.access == "shared") && app.data.getWebMapItem().item.owner == app.portal.getPortalUser().username )
  					targetItems.push(app.data.getWebMapItem().item.id);
 
@@ -579,17 +626,17 @@ define(["esri/arcgis/Portal",
 				items: items,
 				groups: '',
 				everyone: '',
-				account: ''
+				org: ''
 			};
 
 			if ( sharing == "public" )
 				params.everyone = true;
-			if ( sharing == "account" )
-				params.account = true;
+				if ( sharing == "account" || sharing == "org" )
+					params.org = true;
 
 			return esriRequest(
 				{
-					url: portalUrl + "/sharing/content/users/" + uid + "/shareItems",
+					url: portalUrl + "/sharing/rest/content/users/" + uid + "/shareItems",
 					handleAs: 'json',
 					content: params
 				},
@@ -624,7 +671,7 @@ define(["esri/arcgis/Portal",
 
 		function getPortalURL()
 		{
-			return configOptions.sharingurl.split('/sharing/')[0];
+			return arcgisUtils.arcgisUrl.split('/sharing/')[0];
 		}
 
 		function styleIdentityManagerForSave()
@@ -671,7 +718,7 @@ define(["esri/arcgis/Portal",
 
 					var saveRq = esriRequest(
 						{
-							url: portalUrl + "/sharing/content/users/" + uid + (appItem.ownerFolder ? ("/" + appItem.ownerFolder) : "") + "/addItem",
+							url: portalUrl + "/sharing/rest/content/users/" + uid + (appItem.ownerFolder ? ("/" + appItem.ownerFolder) : "") + "/addItem",
 							handleAs: 'json',
 							content: appItem
 						},

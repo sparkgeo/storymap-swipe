@@ -52,6 +52,25 @@ define({
       "autoplayLabel": "自动播放模式",
       "autoplayExplain1": "自动播放模式将定期持续播放您的故事。该模式是广告亭或公共显示屏的理想选择，但请注意，在其他情景下会使故事难以阅读。小型显示器不支持该功能。",
       "autoplayExplain2": "激活此模式时，可使用控件播放/暂停故事和调整导航速度。"
+    },
+    "bannerNotification": {
+      "learnMore": "更多信息",
+      "close": "关闭",
+      "dontShowAgain": "不再显示此消息"
+    },
+    "httpsTransitionMessage": {
+      "bannerMsg": "关于网络安全和故事地图的重要消息",
+      "s1h1": "Esri 将增强故事地图的安全性",
+      "s1p1": "您的故事地图将显示在 web 上，web 社区始终致力于建立并实施更好的安全性措施。HTTPS（可为通过 Internet 传输的内容提供安全连接）正逐渐成为访问 web 内容的首选方式。当使用 HTTP 而非 HTTPS 时，大多数现代浏览器现在会显示警告消息。鉴于这一新兴标准，从 ArcGIS Online 2018 年 6 月的更新起，故事地图将需要使用 HTTPS。",
+      "s1p2": "实际上，这意味着故事地图及其所有内容(包括图像、图层、嵌入式应用程序和网站)必须使用以 HTTPS 而非 HTTP 开头的链接进行访问。这可确保为读者提供最佳体验，因为大多数 web 浏览器都会指示您的故事是安全的。",
+      "s2h1": "我需要做什么?",
+      "s2p1": "Esri 致力于使故事地图的作者和读者轻松实现过渡。Story Map 构建器和 My Stories 中现已提供工具，可帮助您在故事中查找非安全内容 (HTTP)，并就如何解决提出建议。请检查您的故事是否存在非安全内容，并在 2018 年 6 月之前更新为 HTTPS。",
+      "action1": "关闭",
+      "action2": "立即检查我的故事",
+      "action3": "了解详细信息"
+    },
+    "licenseChange2018": {
+      "noAccess": "您的帐户(%USER_NAME%)无权打开非公共 Story Map。 请联系您的组织管理员为您分配包含 Story Maps 或附加基本应用程序许可的用户类型。"
     }
   },
   "builder": {
@@ -122,6 +141,9 @@ define({
       "settingsExtentModifyBtn": "编辑当前范围",
       "settingsExtentApplyBtn": "应用到主地图",
       "settingsExtentUseMainMap": "使用主地图范围"
+    },
+    "storyTellerUserType": {
+      "notCreatorError": "您的帐户(%USER_NAME%)未获得使用经典 Story Map 构建器的许可。 请求您的组织管理员为您分配一个 Creator 用户类型。"
     }
   },
   "swipe": {
@@ -190,7 +212,7 @@ define({
       "settingsSeriesHelpContent2": "通过卷帘系列可创建和编辑一系列具有随附标题和文本的位置。如果 web 地图具有书签，则会显示这些书签。您可以禁用卷帘系列，但配置将保留以供之后使用。",
       "settingsSeriesHelpLink": "在此处查看具有卷帘系列的应用程序示例",
       "preview": "UI 预览",
-      "settingsLocateButtonExplain": "此功能在大多数移动设备和桌面浏览器 (包括 Internet Explorer 9+) 中都受支持。",
+      "settingsLocateButtonExplain": "支持大多数浏览器。仅在通过 HTTPS 访问故事地图时显示。如果故事被镶嵌，则不显示。",
       "settingsLocateButton": "在受支持的浏览器中启用“定位”按钮",
       "settingsAddressSearch": "启用地址搜索工具"
     },
@@ -291,5 +313,31 @@ define({
       "cancel": "取消",
       "placeholder": "输入搜索词"
     }
+  },
+  "httpsTransitionNotification": {
+    "s1h1": "Esri 将增强故事地图的安全性",
+    "s1p1": "您的故事地图将显示在 web 上，web 社区始终致力于建立并实施更好的安全性措施。 HTTPS (可为通过 Internet 传输的内容提供安全连接)正逐渐成为访问 web 内容的首选方式。 当使用 HTTP 而非 HTTPS 时，大多数现代浏览器现在会显示警告消息。 鉴于这一新兴标准，我们强烈建议您使用 HTTPS 链接来创作和共享 Story Maps，并且仅在嵌入 web 内容或链接到 Story Map 中的图像时才使用 HTTPS URL。",
+    "s1p2": "实际上，这意味着 Story Map 及其所有内容(包括影像、图层、嵌入式应用程序和网站)应使用以 HTTPS 而非 HTTP 开头的链接进行访问。 这可确保为读者提供最佳体验，因为大多数 web 浏览器都会指示您的故事是安全的。",
+    "s2h1": "我需要做什么?",
+    "s2p1": "Esri 致力于使故事地图的作者和读者轻松实现过渡。 Story Map 构建器和 My Stories 中现已提供工具，可帮助您在故事中查找非安全内容(HTTP)，并就如何解决提出建议。 请检查您的故事是否存在非安全内容，并尽快更新为 HTTPS。",
+    "action1": "关闭",
+    "action2": "立即检查我的故事",
+    "action3": "了解详细信息"
+  },
+  "embedBar": {
+    "share": "共享",
+    "fullScreen": "全屏",
+    "enlarge": "最大化",
+    "newTab": "在新选项卡中打开",
+    "tagline": "故事地图",
+    "exitFullScreen": "退出全屏"
+  },
+  "june2018SurveyMessage": {
+    "bannerMsg": "我们能问您一些问题吗? 这能够帮助我们塑造 Story Maps 的未来。",
+    "s1h1": "分享观点，塑造未来",
+    "s1p1": "您的观点是我们最重要的反馈来源，了解您的更多观点能帮助我们改进 Story Maps。 如果您能参与用时三分钟的调查，我们将万分感激。",
+    "s2p1": "最后，感谢您一如既往地使用 Esri Story Maps!",
+    "action1": "关闭",
+    "action2": "参与调查"
   }
 });

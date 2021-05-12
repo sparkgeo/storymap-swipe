@@ -43,7 +43,7 @@ define({
       "navRight": "Dati"
     },
     "desktopView": {
-      "storymapsText": "Mappa collegata a una storia",
+      "storymapsText": "Story Map",
       "builderButton": "Passa a modalità generatore",
       "facebookTooltip": "Condividi su Facebook",
       "twitterTooltip": "Condividi su Twitter",
@@ -52,6 +52,25 @@ define({
       "autoplayLabel": "Modalità di riproduzione automatica",
       "autoplayExplain1": "La modalità di riproduzione automatica consente di avanzare nella storia a intervalli regolari. Questa soluzione è ideale in un chiosco o monitor pubblico, ma occorre tenere presente che in altre situazioni potrebbe creare problemi di lettura della storia. Questa funzione non è supportata su display di piccole dimensioni.",
       "autoplayExplain2": "Quando questa modalità è attiva, sono disponibili controlli per riprodurre/sospendere la storia e regolare la velocità di navigazione."
+    },
+    "bannerNotification": {
+      "learnMore": "Ulteriori informazioni",
+      "close": "Chiudi",
+      "dontShowAgain": "Non visualizzare più questo messaggio"
+    },
+    "httpsTransitionMessage": {
+      "bannerMsg": "Messaggio importante riguardante la sicurezza Web e le Story Map",
+      "s1h1": "Esri sta migliorando la sicurezza delle Story Map",
+      "s1p1": "Le Story Map vivono nel Web e la comunità Web è costantemente impegnata nella formulazione e nell’implementazione di misure volte a migliorare la sicurezza. Il protocollo HTTPS, che fornisce una connessione sicura per i contenuti trasmessi su Internet, si sta affermando come metodo di accesso più comune ai contenuti Web. Molti dei browser moderni mostrano un messaggio di avviso nei casi in cui viene usato l’HTTP anziché l’HTTPS. A seguito dell’affermazione di questo standard, a partire dall’aggiornamento di giugno 2018 di ArcGIS Online, le Story Map dovranno usare l’HTTPS.",
+      "s1p2": "A livello pratico, ciò implica che le Story Map e tutti i relativi contenuti (ivi comprese immagini, Layer, app e siti Web incorporati) dovranno essere accessibili attraverso link che iniziano con HTTPS anziché con HTTP. Ciò garantirà una miglior esperienza per gli utenti poiché molti browser segnaleranno che la Story Map è sicura.",
+      "s2h1": "Cosa occorre fare?",
+      "s2p1": "Esri sta lavorando per facilitare la transizione sia per gli autori sia per i lettori di Story Map. I generatori di Story Map e My Stories contengono strumenti che possono essere impiegati per trovare contenuti non sicuri (HTTP) all’interno delle storie e che forniscono indicazioni utili sulla loro gestione. Si prega di verificare la presenza di contenuti non sicuri all’interno delle storie e di aggiornarli all’HTTPS prima del mese di giugno 2018.",
+      "action1": "Chiudi",
+      "action2": "Controlla subito le mie storie",
+      "action3": "Ulteriori informazioni"
+    },
+    "licenseChange2018": {
+      "noAccess": "L’account (%USER_NAME%) non dispone della licenza per aprire una Story Map non pubblica. È necessario richiedere all’amministratore dell'organizzazione l’assegnazione di un tipo di utente che includa le Story Map o una licenza aggiuntiva per le app essenziali."
     }
   },
   "builder": {
@@ -122,6 +141,9 @@ define({
       "settingsExtentModifyBtn": "Modifica l'estensione corrente",
       "settingsExtentApplyBtn": "Applica su mappa principale",
       "settingsExtentUseMainMap": "Usa estensione della mappa principale"
+    },
+    "storyTellerUserType": {
+      "notCreatorError": "L'account (%USER_NAME%) non possiede la licenza per utilizzare i generatori di Story Map classiche. Richiedere all'amministratore dell'organizzazione di assegnare all'utente corrente un tipo di utente Creator."
     }
   },
   "swipe": {
@@ -190,7 +212,7 @@ define({
       "settingsSeriesHelpContent2": "La serie di scorrimenti consente di creare e modificare una selezione di posizioni unitamente ai titoli e al testo cui sono associate. Verranno visualizzati gli eventuali segnalibri presenti nella mappa Web. È possibile disabilitare la serie, ma la configurazione verrà mantenuta per usi futuri.",
       "settingsSeriesHelpLink": "Per un esempio di applicazione con una serie di scorrimenti, vedere qui",
       "preview": "Anteprima interfaccia utente",
-      "settingsLocateButtonExplain": "Questa funzionalità è supportata nella maggior parte dei browser per dispositivi mobili e desktop (incluso Internet Explorer 9 e versioni successive).",
+      "settingsLocateButtonExplain": "Supportato su molti browser. Appare solo se si accede alla mappa della storia da HTTPS. Non appare se la storia è incorporata.",
       "settingsLocateButton": "Abilita un pulsante Trova posizione nei browser supportati",
       "settingsAddressSearch": "Abilita uno strumento per la ricerca di indirizzi"
     },
@@ -291,5 +313,31 @@ define({
       "cancel": "Annulla",
       "placeholder": "Immettere il termine da cercare"
     }
+  },
+  "httpsTransitionNotification": {
+    "s1h1": "Esri sta migliorando la sicurezza delle Story Map",
+    "s1p1": "Le Story Map vivono nel Web e la comunità Web è costantemente impegnata nella formulazione e nell’implementazione di misure volte a migliorare la sicurezza. Il protocollo HTTPS, che fornisce una connessione sicura per i contenuti trasmessi su Internet, si sta affermando come metodo di accesso più comune ai contenuti Web. Molti dei browser moderni mostrano un messaggio di avviso nei casi in cui viene usato l’HTTP anziché l’HTTPS. A causa di questo standard emergente, consigliamo vivamente di utilizzare i link HTTPS per la creazione e la condivisione di Story Maps e di utilizzare solo gli URL HTTPS per incorporare il contenuto Web o il collegamento a immagini all'interno di una Story Map.",
+    "s1p2": "In pratica, ciò significa che una Story Map e tutto il suo contenuto (inclusi immagini, layer, app incorporate e siti Web) devono essere accessibili utilizzando i collegamenti che iniziano con HTTPS anziché con HTTP. Ciò garantisce la migliore esperienza per i lettori perché la maggior parte dei browser Web indica che le tue storie sono al sicuro.",
+    "s2h1": "Cosa occorre fare?",
+    "s2p1": "Esri sta lavorando per rendere questa transizione facile per autori e lettori di Story Map. I generatori di Story Map e My Stories contengono strumenti che possono essere impiegati per trovare contenuti non sicuri (HTTP) all’interno delle storie e che forniscono indicazioni utili sulla loro gestione. Si prega di verificare la presenza di contenuti non sicuri all’interno delle storie e di aggiornarli all’HTTPS prima possibile.",
+    "action1": "Chiudere",
+    "action2": "Controlla subito le mie storie",
+    "action3": "Ulteriori informazioni"
+  },
+  "embedBar": {
+    "share": "Crea",
+    "fullScreen": "Schermo intero",
+    "enlarge": "Allarga",
+    "newTab": "Apri in una nuova scheda",
+    "tagline": "Story Map",
+    "exitFullScreen": "Chiudi visualizzazione a schermo intero"
+  },
+  "june2018SurveyMessage": {
+    "bannerMsg": "Possiamo fare qualche domanda? Ci consentiranno di plasmare il futuro di Story Maps.",
+    "s1h1": "Condividi le tue opinioni, plasma il futuro",
+    "s1p1": "Il contributi degli utenti sono la nostra più importante fonte di feedback e ottenere ulteriori informazioni sugli utenti ci consentirà di migliorare Story Maps. Saremmo lieti che i nostri utenti possano partecipare a questa inchiesta di tre minuti.",
+    "s2p1": "Come sempre, grazie per aver utilizzato Esri Story Maps!",
+    "action1": "Chiudere",
+    "action2": "Partecipa all’inchiesta"
   }
 });

@@ -43,7 +43,7 @@ define({
       "navRight": "Dados"
     },
     "desktopView": {
-      "storymapsText": "Um mapa histórico",
+      "storymapsText": "Um Mapa Histórico",
       "builderButton": "Trocar para modo do construtor",
       "facebookTooltip": "Compartilhar no Facebook",
       "twitterTooltip": "Compartilhar no Twitter",
@@ -52,6 +52,25 @@ define({
       "autoplayLabel": "Modo de reprodução automática",
       "autoplayExplain1": "O modo de reprodução automática avançará por sua história em um intervalo regular. Isto é ideal em um monitor de visualização pública ou de quiosque, mas esteja ciente que em outras situações ele pode tornar a história mais difícil de ler. Este recurso não é suportado em visualizações pequenas.",
       "autoplayExplain2": "Quando este modo está ativo há controles para reproduzir/pausar a história e ajustar a velocidade de navegação."
+    },
+    "bannerNotification": {
+      "learnMore": "Obtenha Mais Informações",
+      "close": "Fechar",
+      "dontShowAgain": "Não mostrar esta mensagem novamente"
+    },
+    "httpsTransitionMessage": {
+      "bannerMsg": "Mensagem Importante sobre Segurança da Web e Mapas Históricos",
+      "s1h1": "A Esri está melhorando a segurança de Mapas Históricos",
+      "s1p1": "Seu Mapa Histórico em tempo real na web e a comunidade da web está sempre trabalhando para estabelecer e implementar uma segurança melhor. HTTPS, que fornece uma conexão segura para conteúdo transmitido na internet, está emergindo como o modo esperado para acessar conteúdo da web. A maioria dos navegadores modernos agora mostram mensagens de aviso quando HTTP é utilizado em vez de HTTPS. Devido ao fato deste padrão estar emergindo, iniciando com a atualização de junho de 2018 para ArcGIS Online, seus Mapas Históricos precisarão utilizar HTTPS.",
+      "s1p2": "Isto significa que um Mapa Histórico e todo seu conteúdo (incluindo imagens, camadas, aplicativos embutidos e sites da web) devem ter links acessados que iniciam com HTTPS em vez de HTTP. Isto assegura uma melhor experiência para seus leitores porque a maioria dos navegadores da web indicarão que suas histórias são seguras.",
+      "s2h1": "O que preciso fazer?",
+      "s2p1": "A Esri está trabalhando para facilitar a transição para autores e leitores de Mapa Histórico. As ferramentas estão disponíveis agora nos construtores de Mapa Histórico e Minhas Histórias que ajudam a você localizar conteúdo inseguro (HTTP) em suas histórias e fornecem recomendações de como proceder com isto. Verifique suas histórias sobre conteúdo inseguro e atualize para HTTPS antes de junho de 2018.",
+      "action1": "Fechar",
+      "action2": "Verificar minhas histórias agora",
+      "action3": "Mais informações"
+    },
+    "licenseChange2018": {
+      "noAccess": "Sua conta (%USER_NAME%) não está licenciada para abrir um Mapa Histórico que não seja público. Solicite ao administrador da sua organização que lhe atribua um tipo de usuário que inclua os Aplicativos Fundamentais ou uma licença complementar dos Aplicativos Fundamentais."
     }
   },
   "builder": {
@@ -122,6 +141,9 @@ define({
       "settingsExtentModifyBtn": "Editar a extensão atual",
       "settingsExtentApplyBtn": "Aplicar no mapa principal",
       "settingsExtentUseMainMap": "Utilizar extensão de mapa atual"
+    },
+    "storyTellerUserType": {
+      "notCreatorError": "Sua conta (%USER_NAME%) não está licenciada para utilizar os construtores de mapa histórico clássicos. Peça a seu administrador da organização para atribuir um tipo de usuário Creator."
     }
   },
   "swipe": {
@@ -190,7 +212,7 @@ define({
       "settingsSeriesHelpContent2": "A série de oscilação permite a você criar e editar uma seleção de posições com acompanhamento de títulos e texto.  Se seu mapa da web tiver marcadores, eles serão exibidos.  Você pode desativar a série, mas a configuração será preservada para uso futuro.",
       "settingsSeriesHelpLink": "Consulte um exemplo de um aplicativo com uma série de oscilação aqui",
       "preview": "Visualizar ID",
-      "settingsLocateButtonExplain": "Esta funcionalidade é suportada na maioria dos dispositivos móveis e navegadores desktop (incluindo Internet Explorer 9 +).",
+      "settingsLocateButtonExplain": "Suportado na maioria dos navegadores. Somente aparece quando o mapa histórico é acessado através de HTTPS. Não aparece se a história estiver embutida.",
       "settingsLocateButton": "Habilitar botão 'Localizar' em navegadores suportados",
       "settingsAddressSearch": "Habilitar uma ferramenta de pesquisa de endereço"
     },
@@ -291,5 +313,31 @@ define({
       "cancel": "Cancelar",
       "placeholder": "Inserir termo de pesquisa"
     }
+  },
+  "httpsTransitionNotification": {
+    "s1h1": "A Esri está melhorando a segurança de Mapas Históricos",
+    "s1p1": "Seus Mapas Históricos em tempo real na web e a comunidade da web estão sempre trabalhando para estabelecer e implementar melhor a segurança. O HTTPS, que fornece uma conexão segura para o conteúdo transmitido pela Internet, está emergindo como a maneira esperada de acessar o conteúdo da web. A maioria dos navegadores modernos agora mostra mensagens de aviso quando HTTP é utilizado, ao invés de HTTPS. Devido a este padrão emergente, recomendamos que você utilize links de HTTPS para criar e compartilhar os Mapas Históricos e utilizar somente URLs de HTTPS ao embutir o conteúdo da web ou vincular às imagens em um Mapa Histórico.",
+    "s1p2": "Em termos práticos, isto significa que um Mapa Histórico e todo o seu conteúdo (incluindo imagens, camadas, aplicativos embutidos e sites) deve ser acessado utilizando links que iniciam com HTTPS, ao invés de HTTP. Isto garante a melhor experiência para seus leitores, pois a maioria dos navegadores da web indicará que suas histórias são seguras.",
+    "s2h1": "O que preciso fazer?",
+    "s2p1": "A Esri está trabalhando para tornar isto uma transição fácil para os autores e leitores do Mapa Histórico. As ferramentas estão disponíveis agora nos construtores do Mapa Histórico e em Minhas Histórias, que ajudam você a encontrar conteúdo não protegido (HTTP) em suas histórias e fornecem recomendações sobre como lidar com isto. Verifique suas histórias por conteúdo não protegido e atualize para HTTPS o mais rápido possível.",
+    "action1": "Fechar",
+    "action2": "Verificar minhas histórias agora",
+    "action3": "Mais informações"
+  },
+  "embedBar": {
+    "share": "Compartilhar",
+    "fullScreen": "Tela Cheia",
+    "enlarge": "Aumentar",
+    "newTab": "Abrir em uma nova guia",
+    "tagline": "Um Mapa Histórico",
+    "exitFullScreen": "Sair da tela cheia"
+  },
+  "june2018SurveyMessage": {
+    "bannerMsg": "Podemos te perguntar uma coisa? Isto ajudará a moldar o futuro dos Mapas Históricos.",
+    "s1h1": "Compartilhe seus pensamentos, modele o futuro",
+    "s1p1": "Sua opinião é a nossa mais importante fonte de comentários, e aprender mais sobre você nos ajudará a melhorar os Mapas Históricos. Ficaríamos muito gratos se você pudesse participar desta pesquisa de três minutos.",
+    "s2p1": "Como sempre, obrigado por utilizar o Esri Story Maps!",
+    "action1": "Fechar",
+    "action2": "Realizar a pesquisa"
   }
 });

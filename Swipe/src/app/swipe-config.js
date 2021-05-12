@@ -9,10 +9,10 @@ APPCFG = {
 
 	// Header Logo
 	HEADER_LOGO_URL: "resources/icons/esri-logo-white.png",
-	HEADER_LOGO_TARGET: "http://www.esri.com",
+	HEADER_LOGO_TARGET: "https://www.esri.com",
 	// Header top right link
-	HEADER_LINK_TEXT: "A story map",
-	HEADER_LINK_URL: "http://storymaps.arcgis.com/",
+	HEADER_LINK_TEXT: "A Story Map",
+	HEADER_LINK_URL: "https://storymaps.arcgis.com/",
 	// Control display of Facebook and Twitter links
 	HEADER_SOCIAL: {
 		facebook: true,
@@ -31,11 +31,14 @@ APPCFG = {
 	TIMEOUT_VIEWER_REQUEST: 60000,
 	TIMEOUT_BUILDER_REQUEST: 60000,
 
+	// Date to enforce HTML sanitization and embed bar for apps created after 6/27/18 (June '18 release)
+	HTML_SANITIZER_DATE: 1530072000000,
+	JUNE_RELEASE_DATE: 1530072000000,
 	//
 	// Builder
 	//
 
-	DEFAULT_SHARING_URL: "//www.arcgis.com/sharing/content/items",
+	DEFAULT_SHARING_URL: "//www.arcgis.com/sharing/rest/content/items",
 	DEFAULT_PROXY_URL: "//www.arcgis.com/sharing/proxy",
 
 	COLOR_SCHEMES:  [
@@ -81,8 +84,8 @@ APPCFG = {
 	// Edit those to set a custom sharing or proxy URL
 	// You have to edit those only if your webmap is deployed on Portal for ArcGIS instance and if you are not deploying the template on the Portal webserver
 	// If you are using ArcGIS Online or deploying the template on a Portal instance, you don't have to edit those URL
-	DEFAULT_SHARING_URL: "//www.arcgis.com/sharing/content/items",
-	//DEFAULT_SHARING_URL: "//portal.internal.com/arcgis/sharing/content/items",
+	DEFAULT_SHARING_URL: "//www.arcgis.com/sharing/rest/content/items",
+	//DEFAULT_SHARING_URL: "//portal.internal.com/arcgis/sharing/rest/content/items",
 	DEFAULT_PROXY_URL: "//www.arcgis.com/sharing/proxy"
 	//DEFAULT_PROXY_URL: "//portal.internal.com/arcgis/sharing/proxy"
 };

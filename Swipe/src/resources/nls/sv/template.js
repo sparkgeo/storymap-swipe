@@ -43,7 +43,7 @@ define({
       "navRight": "Data"
     },
     "desktopView": {
-      "storymapsText": "En berättelsekarta",
+      "storymapsText": "En Story Map",
       "builderButton": "Växla till byggläget",
       "facebookTooltip": "Dela på Facebook",
       "twitterTooltip": "Dela på Twitter",
@@ -52,6 +52,25 @@ define({
       "autoplayLabel": "Autouppspelningsläge",
       "autoplayExplain1": "Autouppspelningsläge kommer att köras på din berättelse med ett regelbundet intervall. Detta är idealiskt för informationskiosker och offentliga bildskärmar, men du bör vara medveten om att det i andra situationer kan göra berättelsen svårare att läsa. Funktionen stöds inte på små skärmar.",
       "autoplayExplain2": "När läget är aktivt finns det kontroller för att spela upp/pausa berättelsen och anpassa navigeringshastigheten."
+    },
+    "bannerNotification": {
+      "learnMore": "Läs mer",
+      "close": "Stäng",
+      "dontShowAgain": "Visa inte det här meddelandet igen"
+    },
+    "httpsTransitionMessage": {
+      "bannerMsg": "Viktigt meddelande om webbsäkerhet och Story Maps",
+      "s1h1": "Esri höjer säkerheten för Story Maps",
+      "s1p1": "Story Maps live på webben och vårt webbforum arbetar ständigt med att etablera och implementera bättre säkerhetsfunktioner. HTTPS, som ger en säker anslutning för överföring av innehåll via internet, börjar bli standard för åtkomst till webbinnehåll. De flesta moderna webbläsare visar nu varningsmeddelanden när HTTP används istället för HTTPS. Efter att vi har gått över till denna nya standard, vilket påbörjas vid uppdateringen av ArcGIS Online i juni 2018, kommer dina Story Maps att behöva använda HTTPS.",
+      "s1p2": "I praktiken innebär detta att man för att få åtkomst till en Story Map och allt dess innehåll (inklusive bilder, lager, inbäddade appar och webbplatser) måste använda länkar som börjar med HTTPS istället för HTTP. Detta ger dina läsare den bästa upplevelsen, eftersom de flesta webbläsare kommer att ange att dina berättelser är säkra.",
+      "s2h1": "Vad behöver jag göra?",
+      "s2p1": "Esri strävar efter att förenkla övergången för författare och läsare av Story Maps. Vi erbjuder verktyg som hjälper dig att hitta osäkert innehåll (HTTP) i dina berättelser och ger råd om hur du ska hantera det. Dessa finns nu tillgängliga i byggverktyget för Story Map och Mina berättelser. Kontrollera om dina berättelser har osäkert innehåll och uppdatera till HTTPS före juni 2018.",
+      "action1": "Stäng",
+      "action2": "Kontrollera mina berättelser nu",
+      "action3": "Läs mer"
+    },
+    "licenseChange2018": {
+      "noAccess": "Ditt konto (%USER_NAME%) har ingen licens för att öppna en Story Map som inte är tillgänglig för allmänheten. Be din organisations administratör att tilldela dig en användartyp som omfattar Story Maps eller en tilläggslicens för Essential Apps."
     }
   },
   "builder": {
@@ -122,6 +141,9 @@ define({
       "settingsExtentModifyBtn": "Redigera aktuell utbredning",
       "settingsExtentApplyBtn": "Använd på huvudkartan",
       "settingsExtentUseMainMap": "Använd huvudkartans utbredning"
+    },
+    "storyTellerUserType": {
+      "notCreatorError": "Ditt konto (%USER_NAME%) har ingen licens för att använda klassiska Story Maps-builder. Be organisationens administratör att tilldela dig en Creator-användartyp."
     }
   },
   "swipe": {
@@ -190,7 +212,7 @@ define({
       "settingsSeriesHelpContent2": "Med hjälp av en svepserie kan du skapa och redigera ett urval platser med tillhörande rubriker och text. Om det finns bokmärken i webbkartan visas dessa. Du kan inaktivera serien, men konfigurationen finns ändå kvar och kan användas senare.",
       "settingsSeriesHelpLink": "Här finns ett exempel på en applikation med en svepserie",
       "preview": "Förhandsgranska användargränssnitt",
-      "settingsLocateButtonExplain": "Den här funktionen kan användas på de flesta mobila enheter och datorwebbläsare (inklusive Internet Explorer 9+).",
+      "settingsLocateButtonExplain": "Stöds för de flesta webbläsare. Visas endast vid åtkomst till berättelsekartan via HTTPS. Visas inte om berättelsen är inbäddad.",
       "settingsLocateButton": "Aktivera knappen Hitta för webbläsare som stöds",
       "settingsAddressSearch": "Aktivera ett adressökverktyg"
     },
@@ -291,5 +313,31 @@ define({
       "cancel": "Avbryt",
       "placeholder": "Ange sökterm"
     }
+  },
+  "httpsTransitionNotification": {
+    "s1h1": "Esri höjer säkerheten för Story Maps",
+    "s1p1": "Story Maps live på webben och vårt webbforum arbetar ständigt med att etablera och implementera bättre säkerhetsfunktioner. HTTPS, som ger en säker anslutning för överföring av innehåll via internet, börjar bli standard för åtkomst till webbinnehåll. De flesta moderna webbläsare visar nu varningsmeddelanden när HTTP används istället för HTTPS. På grund av denna framväxande standard rekommenderar vi starkt att du använder HTTPS-länkar när du skapar och delar Story Maps, och att du bara använder HTTPS-URL:er när du bäddar in webbmaterial eller länkar till bilder i en Story Map.",
+    "s1p2": "I praktiken innebär detta att man för att få åtkomst till en Story Map och allt dess innehåll (inklusive bilder, lager, inbäddade appar och webbplatser) måste använda länkar som börjar med HTTPS istället för HTTP. Detta ger dina läsare den bästa upplevelsen, eftersom de flesta webbläsare kommer att ange att dina berättelser är säkra.",
+    "s2h1": "Vad behöver jag göra?",
+    "s2p1": "Esri strävar efter att förenkla övergången för författare och läsare av Story Maps. Vi erbjuder verktyg som hjälper dig att hitta osäkert innehåll (HTTP) i dina berättelser och ger råd om hur du ska hantera det. Dessa finns nu tillgängliga i byggverktyget för Story Map och Mina berättelser. Kontrollera om dina berättelser har osäkert innehåll och uppdatera till HTTPS så snart som möjligt.",
+    "action1": "Stäng",
+    "action2": "Kontrollera mina berättelser nu",
+    "action3": "Läs mer"
+  },
+  "embedBar": {
+    "share": "Dela",
+    "fullScreen": "Helskärm",
+    "enlarge": "Förstora",
+    "newTab": "Öppna i en ny flik",
+    "tagline": "En Story Map",
+    "exitFullScreen": "Avsluta helskärmsläge"
+  },
+  "june2018SurveyMessage": {
+    "bannerMsg": "Får vi be dig om en sak? Det kommer att bidra till att forma framtiden för Story Maps.",
+    "s1h1": "Dela med dig av dina tankar och forma framtiden",
+    "s1p1": "Dina synpunkter är vår viktigaste källa till information, och om vi får veta mer om vad du tycker hjälper du oss att förbättra Story Maps. Vi skulle vara tacksamma om du kan delta i denna tre minuter korta undersökning.",
+    "s2p1": "Tack för att du använder Esri Story Maps!",
+    "action1": "Stäng",
+    "action2": "Genomför undersökningen"
   }
 });

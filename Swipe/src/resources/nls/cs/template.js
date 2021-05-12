@@ -52,6 +52,25 @@ define({
       "autoplayLabel": "Režim automatického přehrávání",
       "autoplayExplain1": "Režim automatického přehrávání bude příběhem procházet v pravidelných intervalech. Ideální pro použití na výstavních stáncích nebo veřejných monitorech, buďte si však vědomi toho, že to v některých případech může znesnadnit čtení příběhu. Tato funkce není podporována na malých obrazovkách.",
       "autoplayExplain2": "Je-li tento režim aktivní, budou k dispozici ovládací prvky ke spuštění/pozastavení přehrávání příběhu a k nastavení rychlosti procházení."
+    },
+    "bannerNotification": {
+      "learnMore": "Více informací",
+      "close": "Zavřít",
+      "dontShowAgain": "Toto hlášení příště nezobrazovat"
+    },
+    "httpsTransitionMessage": {
+      "bannerMsg": "Důležité upozornění týkající se webové bezpečnosti a map s příběhem",
+      "s1h1": "Společnost Esri zvyšuje zabezpečení map s příběhem",
+      "s1p1": "Vaše mapy s příběhem živě na webu a webová komunita neustále pracují na tom, jak zajistit a implementovat lepší zabezpečení. Protokol HTTPS, který poskytuje bezpečné připojení k obsahu šířenému po internetu, se profiluje jako běžný způsob přístupu k webovému obsahu. Většina moderních prohlížečů dnes zobrazuje varování, když internetová adresa používá protokol HTTP místo HTTPS. Kvůli tomuto vznikajícímu standardu bude nutné, počínaje updatem ArcGIS Online v červnu 2018, aby vaše mapy s příběhem používaly protokol HTTPS.",
+      "s1p2": "V praxi to znamená, že přístup k mapě s příběhem a veškerému jejímu obsahu (včetně obrázků, vrstev, připojených aplikací a webových stránek) musí probíhat prostřednictvím odkazů, které začínají řetězcem HTTPS místo HTTP. Zajistíte tak svým čtenářům ten nejlepší možný zážitek, jelikož většina webových prohlížečů bude hlásit, že vaše příběhy používají zabezpečené připojení.",
+      "s2h1": "Co mám udělat?",
+      "s2p1": "Společnost Esri pracuje na tom, aby pro autory map s příběhem a čtenáře tento přechod proběhl hladce. V nástrojích pro tvorbu map s příběhem a aplikaci Moje příběhy jsou nyní k dispozici pomůcky, které vám umožní najít nezabezpečený obsah (HTTP) ve vašich příbězích a které vám poradí, jak postupovat dál. Zkontrolujte prosím zabezpečení svých příběhů a přejděte na protokol HTTPS do června 2018.",
+      "action1": "Zavřít",
+      "action2": "Chci si prohlédnout svoje příběhy",
+      "action3": "Více informací"
+    },
+    "licenseChange2018": {
+      "noAccess": "Váš účet (%USER_NAME%) nevlastní licenci k otevření mapy s příběhem, která není veřejná. Požádejte prosím správce své organizace, aby vám přidělil typ uživatele, jehož součástí jsou mapy s příběhem nebo doplňková licence základních aplikací."
     }
   },
   "builder": {
@@ -122,6 +141,9 @@ define({
       "settingsExtentModifyBtn": "Editovat aktuální rozsah",
       "settingsExtentApplyBtn": "Použít v hlavní mapě",
       "settingsExtentUseMainMap": "Použít rozsah hlavní mapy"
+    },
+    "storyTellerUserType": {
+      "notCreatorError": "Váš účet (%USER_NAME%) nevlastní licenci k použití nástrojů pro tvorbu klasických map s příběhem. Požádejte prosím administrátora své organizace, aby vám přidělil typ uživatele Creator."
     }
   },
   "swipe": {
@@ -190,7 +212,7 @@ define({
       "settingsSeriesHelpContent2": "Série překrývání vám umožní vytvořit a editovat výběr lokalit s připojenými nadpisy a textem. Pokud má vaše webová mapa záložky, budou zobrazeny. Sérii můžete zakázat, ale konfigurace bude uložena pro budoucí použití.",
       "settingsSeriesHelpLink": "Zde se podívejte na příklad aplikace se sérií překrývání",
       "preview": "Náhled uživatelského rozhraní",
-      "settingsLocateButtonExplain": "Tato funkcionalita je podporována na většině mobilních zařízení a stolních prohlížečů (včetně Internet Explorer 9+).",
+      "settingsLocateButtonExplain": "Podporováno většinou prohlížečů. Zobrazuje se pouze, pokud se k mapě s příběhem přistupuje přes HTTPS. Nezobrazuje se, pokud je příběh vložený.",
       "settingsLocateButton": "Povolit tlačítko 'Lokalizovat' v podporovaných prohlížečích",
       "settingsAddressSearch": "Povolit nástroj pro vyhledávání adres"
     },
@@ -291,5 +313,31 @@ define({
       "cancel": "Storno",
       "placeholder": "Zadat vyhledávací výraz"
     }
+  },
+  "httpsTransitionNotification": {
+    "s1h1": "Společnost Esri zvyšuje zabezpečení map s příběhem",
+    "s1p1": "Vaše mapy s příběhem žijí na webu a webová komunita neustále pracuje na zajištění a implementaci lepší bezpečnosti. Protokol HTTPS, který poskytuje zabezpečené připojení pro obsah přenášený přes internet se stává standardním způsobem přístupu na web. Většina moderních prohlížečů nyní zobrazí varování, pokud se použije protokol HTTP místo HTTPS. Díky této rozvíjející se normě vám důrazně doporučujeme pro tvorbu a sdílení map s příběhem používat odkazy HTTPS a používat pouze adresy URL s protokolem HTTPS při vkládání webového obsahu či odkazů na snímky v mapách s příběhem.",
+    "s1p2": "V praxi to znamená, že k mapě s příběhem a veškerému jejímu obsahu (včetně snímků, vrstev, vložených aplikací a webových stránek) by měly vést odkazy začínající na HTTPS místo HTTP. To zajistí maximální spokojenost vašich čtenářů, protože většina webových prohlížečů vaše příběhy označí jako bezpečné.",
+    "s2h1": "Co mám udělat?",
+    "s2p1": "Esri provádí kroky, aby to pro autory a čtenáře map s příběhem znamenalo hladký přechod. V nástrojích pro tvorbu map s příběhem a v sekci Moje příběhy jsou nyní k dispozici pomůcky, které vám umožní najít nezabezpečený obsah (HTTP) ve vašich příbězích a které vám poradí, jak postupovat dál. Zkontrolujte prosím zabezpečení svých příběhů a přejděte na protokol HTTPS co nejdříve.",
+    "action1": "Zavřít",
+    "action2": "Chci si prohlédnout svoje příběhy",
+    "action3": "Více informací"
+  },
+  "embedBar": {
+    "share": "Sdílet",
+    "fullScreen": "Celá obrazovka",
+    "enlarge": "Zvětšit",
+    "newTab": "Otevřít na nové kartě.",
+    "tagline": "Mapa s příběhem",
+    "exitFullScreen": "Ukončit režim celé obrazovky"
+  },
+  "june2018SurveyMessage": {
+    "bannerMsg": "Můžeme vám položit několik otázek? Pomůže nám to vytvořit budoucnost map s příběhem.",
+    "s1h1": "Podělte se o své nápady, vytvářejte budoucnost.",
+    "s1p1": "Váš ohlas je naším nejdůležitějším zdrojem zpětné vazby a více informací o vás nám pomůže mapy s příběhem dále vylepšovat. Velice bychom ocenili, kdybyste se mohli zúčastnit tohoto tříminutového průzkumu.",
+    "s2p1": "A jako vždy, děkujeme vám za to, že používáte mapy s příběhem!",
+    "action1": "Zavřít",
+    "action2": "Provést průzkum"
   }
 });

@@ -52,6 +52,25 @@ define({
       "autoplayLabel": "自動播放模式",
       "autoplayExplain1": "自動播放模式將以一定間隔向前播放您的故事。這很適用於書報攤或公共顯示器，但請注意，在其他情況下可能會使得故事更難閱讀。此圖徵不支援小畫面。",
       "autoplayExplain2": "啟用此模式時，可使用控制項來播放/暫停故事和調整瀏覽速度。"
+    },
+    "bannerNotification": {
+      "learnMore": "瞭解詳細資訊",
+      "close": "關閉",
+      "dontShowAgain": "請勿再次顯示此訊息"
+    },
+    "httpsTransitionMessage": {
+      "bannerMsg": "Web 安全性和 Story Maps 的相關重要資訊",
+      "s1h1": "Esri 正在加強 Story Maps 的安全性",
+      "s1p1": "您的 Story Maps 在 Web 上運作，且 Web 社群一直致力於建立和實施更好的安全機制。為透過網際網路傳輸的內容提供安全連線的 HTTPS，正在成為存取 Web 內容的通行方式。若是使用 HTTP 而非 HTTPS，現今大多數的瀏覽器都會顯示警告訊息。基於此新興的標準，從 ArcGIS Online 的 2018 年 6 月更新開始，Story Maps 將需要使用 HTTPS。",
+      "s1p2": "從實務而言，這表示故事地圖及其所有內容 (包含圖片、圖層、內嵌的應用程式和網站) 都必須使用以 HTTPS (而非 HTTP) 開頭的連結存取。如此可確保為您的讀者提供最佳的體驗，因為大多數的 Web 瀏覽器都會指出您的故事是安全的。",
+      "s2h1": "我需要執行哪些工作?",
+      "s2p1": "Esri 正在努力使故事地圖的作者和讀者都能輕鬆進行此轉移。故事地圖建立器和我的故事現在提供了工具，可協助您在故事中尋找不安全的內容 (HTTP)，並提供如何解決問題的建議。請檢查您的故事是否有不安全的內容，並在 2018 年 6 月之前更新為 HTTPS。",
+      "action1": "關閉",
+      "action2": "立即檢查我的故事",
+      "action3": "瞭解詳細資訊"
+    },
+    "licenseChange2018": {
+      "noAccess": "您的帳號 (%USER_NAME%) 未經授權，無法開啟非公開的故事地圖。 請聯繫您的組織管理員，請其將包含 Story Maps 或附加元件基礎應用程式授權的使用者類型指派給您。"
     }
   },
   "builder": {
@@ -122,6 +141,9 @@ define({
       "settingsExtentModifyBtn": "編輯目前範圍",
       "settingsExtentApplyBtn": "應用到主地圖",
       "settingsExtentUseMainMap": "使用主地圖範圍"
+    },
+    "storyTellerUserType": {
+      "notCreatorError": "您的帳號 (%USER_NAME%) 沒有使用傳統的故事地圖建立器的授權。 請要求您的組織管理員將 Creator 使用者類型指派給您。"
     }
   },
   "swipe": {
@@ -190,7 +212,7 @@ define({
       "settingsSeriesHelpContent2": "透過 Swipe 系列可建立和編輯一系列隨附標題和文字的位置。如果 web 地圖有書簽，則會顯示這些書簽。您可以停用 Swipe 簾系列，但設定將保留以供之後使用。",
       "settingsSeriesHelpLink": "在此處查看具有 Swipe 系列的應用程式範例",
       "preview": "UI 預覽",
-      "settingsLocateButtonExplain": "此功能在大多數行動裝置和桌面瀏覽器 (包括 Internet Explorer 9+) 中都受支援。",
+      "settingsLocateButtonExplain": "大多數瀏覽器皆支援。只有在透過 HTTPS 存取故事地圖時才會出現。若內嵌地圖則不會出現。",
       "settingsLocateButton": "在受支援的瀏覽器中啟用“定位”按鈕",
       "settingsAddressSearch": "啟用地址搜尋工具"
     },
@@ -291,5 +313,31 @@ define({
       "cancel": "取消",
       "placeholder": "輸入搜尋詞彙"
     }
+  },
+  "httpsTransitionNotification": {
+    "s1h1": "Esri 正在加強 Story Maps 的安全性",
+    "s1p1": "您的 Story Maps 在 Web 上運作，且 Web 社群一直致力於建立和實施更好的安全機制。 為透過網際網路傳輸的內容提供安全連線的 HTTPS，正在成為存取 Web 內容的通行方式。 若是使用 HTTP 而非 HTTPS，現今大多數的瀏覽器都會顯示警告訊息。 基於此新興的標準，我們強烈建議您使用 HTTPS 連結來創作和分享 Story Maps，並在故事地圖的圖片中嵌入 Web 內容或連結時，僅使用 HTTPS URL。",
+    "s1p2": "從實務而言，這表示故事地圖及其所有內容 (包含圖片、圖層、內嵌的應用程式和網站) 都必須使用以 HTTPS (而非 HTTP) 開頭的連結存取。 如此可確保為您的讀者提供最佳的體驗，因為大多數的 Web 瀏覽器都會指出您的故事是安全的。",
+    "s2h1": "我需要執行哪些工作?",
+    "s2p1": "Esri 正在努力使故事地圖的作者和讀者都能輕鬆進行此轉移。 故事地圖建立器和我的故事現在提供了工具，可協助您在故事中尋找不安全的內容 (HTTP)，並提供如何解決問題的建議。 請檢查您的故事是否有不安全的內容，並盡快更新為 HTTPS。",
+    "action1": "關閉",
+    "action2": "立即檢查我的故事",
+    "action3": "瞭解詳細資訊"
+  },
+  "embedBar": {
+    "share": "分享",
+    "fullScreen": "全螢幕",
+    "enlarge": "放大",
+    "newTab": "在新頁籤中開啟",
+    "tagline": "故事地圖",
+    "exitFullScreen": "退出全螢幕"
+  },
+  "june2018SurveyMessage": {
+    "bannerMsg": "我們是否能詢問您一些事情? 它將有助於形塑 Story Maps 的願景。",
+    "s1h1": "分享您的構想以形塑願景。",
+    "s1p1": "您的意見是我們最重要且唯一的回饋來源，且盡可能獲得您的寶貴意見將有助於改善 Story Maps。 如果您能參加這個三分鐘的調查，我們將不勝感激。",
+    "s2p1": "無論如何，非常感謝您使用 Esri Story Maps!",
+    "action1": "關閉",
+    "action2": "參與調查"
   }
 });
