@@ -43,7 +43,7 @@ define({
       "navRight": "Podaci"
     },
     "desktopView": {
-      "storymapsText": "Karta s pričom",
+      "storymapsText": "Story Map",
       "builderButton": "Prebaci na način rada sastavljača",
       "facebookTooltip": "Podijeli na Facebooku",
       "twitterTooltip": "Podijeli na Twitteru",
@@ -52,6 +52,25 @@ define({
       "autoplayLabel": "Automatska reprodukcija",
       "autoplayExplain1": "Automatska reprodukcija prikazivat će vašu priču u redovitim intervalima. To je idealno za kiosk ili javno prikazani zaslon, no budite svjesni da će se u drugim situacijama priča možda teže čitati. Ova značajka nije podržana na malim zaslonima.",
       "autoplayExplain2": "Kada je ovaj način rada aktivan, postoje kontrole za reprodukciju/pauziranje priče i podešavanje brzine navigacije."
+    },
+    "bannerNotification": {
+      "learnMore": "Saznaj više",
+      "close": "Zatvori",
+      "dontShowAgain": "Nemoj ponovno prikazati ovu poruku"
+    },
+    "httpsTransitionMessage": {
+      "bannerMsg": "Važna poruka o internetskoj sigurnosti i Story Mapsu",
+      "s1h1": "Esri unaprjeđuje sigurnost Story Mapsa",
+      "s1p1": "Vaš Story Maps koji se prikazuje uživo na internetu i internetska zajednica uvijek rade na tome da uspostave i provedu bolju sigurnost. HTTPS, koji osigurava sigurnu vezu za sadržaj koji se prenosi preko interneta, postaje očekivani način pristupa web sadržajima. Najsuvremeniji preglednici sada prikazuju poruke upozorenja kad se upotrebljava HTTP umjesto HTTPS. Zbog tog novog standarda, od ažuriranja ArcGIS Onlinea u lipnju 2018. vaš Story Maps trebat će upotrebljavati HTTPS.",
+      "s1p2": "Praktično govoreći, to znači da se Story Mapu i svom njegovom sadržaju (uključujući slike, slojeve, ugrađene appove i web-mjesta) mora pristupiti pomoću poveznica koje počinju HTTPS-om umjesto HTTP-om. Time se osigurava najbolje iskustvo za čitatelje jer će većina web-preglednika naznačiti da su vaše priče sigurne.",
+      "s2h1": "Što trebam napraviti?",
+      "s2p1": "Esri radi na tome da to bude lak prijelaz za autore i čitatelje Story Mapa. Alati su sada dostupni u sastavljaču Story Map i u Mojim pričama pomoću kojih ćete pronaći nesiguran sadržaj (HTTP) u vašim pričama i koji će vam preporučiti kako to riješiti. Pregledajte svoje priče za nesiguran sadržaj i nadogradite na HTTPS prije lipnja 2018.",
+      "action1": "Zatvori",
+      "action2": "Sada pregledaj moje priče",
+      "action3": "Saznajte više"
+    },
+    "licenseChange2018": {
+      "noAccess": "Vaš račun (%USER_NAME%) nije licenciran za upotrebu Story Mapa koji nije javan. Obratite se administratoru svoje organizacije da vam dodijeli vrstu korisnika koja sadrži licencu za Story Map ili za dodatke za osnovne appove."
     }
   },
   "builder": {
@@ -122,6 +141,9 @@ define({
       "settingsExtentModifyBtn": "Uredite trenutačni obuhvat",
       "settingsExtentApplyBtn": "Primijeni na glavnu kartu",
       "settingsExtentUseMainMap": "Upotrijebi obuhvat glavne karte"
+    },
+    "storyTellerUserType": {
+      "notCreatorError": "Vaš račun (%USER_NAME%) nije licenciran za upotrebu classic story map builder softvera. Upitajte administratora svoje organizacije da vam dodijeli vrstu korisnika Creator."
     }
   },
   "swipe": {
@@ -190,7 +212,7 @@ define({
       "settingsSeriesHelpContent2": "Serija s klizačem omogućuje vam da stvorite i uredite niz lokacija s popratnim naslovima i tekstom. Ako vaša web-karta ima knjižne oznake, one će se prikazati. Možete onemogućiti seriju, no konfiguracija će se sačuvati za buduću upotrebu.",
       "settingsSeriesHelpLink": "Ovdje pogledajte primjer primjene sa serijom klizača",
       "preview": "Pretpregled korisničkog sučelja",
-      "settingsLocateButtonExplain": "Ova je funkcionalnost podržana na većini preglednika mobilnih uređaja i radnih površina (uključujući Internet Explorer 9+).",
+      "settingsLocateButtonExplain": "Podržano na većini preglednika. Pojavljuje se samo kada se karti s pričom pristupa preko HTTPS-a. Ne pojavljuje se ako je priča umetnuta.",
       "settingsLocateButton": "Omogući gumb „Lociraj” na podržanim preglednicima",
       "settingsAddressSearch": "Omogući alat za pretraživanje adresa"
     },
@@ -248,7 +270,7 @@ define({
       "shareHeader2": "Vaša je priča dostupna članovima vaše organizacije (potrebna je prijava)",
       "shareLinkHeader": "Podijelite svoju priču",
       "shareLinkOpen": "OTVORI",
-      "learnMore": "Saznaj više",
+      "learnMore": "Saznajte više",
       "shareA1": "Upotrijebite %SHAREIMG% na <a href='%LINK1%' target='_blank'>stranici stavke aplikacije</a>. Ako želite prekinuti dijeljenje web-karte, upotrijebite <a href='%LINK2%' target='_blank'>stranicu stavke web-karte</a>.",
       "shareWarning": "Onemogućeno je dijeljenje %WITH% jer niste vlasnik <a href='%LINK%' target='_blank'>web-karte</a>.",
       "shareWarningWith1": "javno",
@@ -291,5 +313,31 @@ define({
       "cancel": "Odustani",
       "placeholder": "Unesite termin za pretraživanje"
     }
+  },
+  "httpsTransitionNotification": {
+    "s1h1": "Esri unaprjeđuje sigurnost Story Mapsa",
+    "s1p1": "Vaše Story Maps uživo na mreži i mrežna zajednica uvijek radi na uspostavljanju u ostvarivanju veće sigurnosti. HTTPS, koji omogućuje sigurnu vezu za sadržaj koji se prenosi putem interneta, sve se češće pojavljuje se kao način pristupa mrežnom sadržaju Najmoderniji pretraživači sada prikazuju poruke upozorenja kada se upotrebljava HTTP umjesto HTTPS-a. Zbog ovog rastućeg standarda, preporučujemo da upotrebljavate HTTPS poveznice za stvaranje i dijeljenje za Story Maps i da upotrebljavate samo HTTPS URL-ove kada ugrađujete mrežni sadržaj ili stvarate poveznice na slike unutar Story Maps.",
+    "s1p2": "Općenito govoreći, to znači da u Story Maps i sav pripadajući sadržaj (uključujući slike, slojeve, ugrađene appove i web-mjesta) treba pristupiti putem povezinica koje počinju s HTTPS, a ne HTTP. To osigurava najbolje iskustvo vašim čitateljima jer će većina mrežnih preglednika prepoznati da su vaše priče sigurne.",
+    "s2h1": "Što trebam napraviti?",
+    "s2p1": "Esri radi na toma da olakša ovaj prijelaz za autore i čitače usluge Story Maps. Alati su dostupni sada u sastavljačima za Story Map i My Stories koji vam olakšavaju pronalaženje nesigurnog sadržaja (HTTP) u vašim pričama i nude vam preporuke kako ih riješiti. Pregledajte ima li u vašim pričama nesigurnog sadržaja i nadogradite ih na HTTPS što je prije moguće.",
+    "action1": "Zatvori",
+    "action2": "Sada pregledaj moje priče",
+    "action3": "Saznajte više"
+  },
+  "embedBar": {
+    "share": "Podijeli",
+    "fullScreen": "Puni zaslon",
+    "enlarge": "Uvećaj",
+    "newTab": "Otvori u novoj kartici",
+    "tagline": "Story Map",
+    "exitFullScreen": "Izađi iz punog zaslona"
+  },
+  "june2018SurveyMessage": {
+    "bannerMsg": "Možemo li vas nešto pitati? Pomoći će nam u oblikovanju budućnosti usluge Story Maps.",
+    "s1h1": "Podijelite svoje misli, oblikujte budućnost",
+    "s1p1": "Vaša su iskustva naš najvažniji izvor povratnih informacija i ako saznamo više o vama, to će nam pomoći poboljšati Story Maps. Bili bismo zahvalni ako biste sudjelovali u ovoj anketi koja traje tri minute.",
+    "s2p1": "Kao i uvijek, hvala na korištenju Esri Story Maps!",
+    "action1": "Zatvori",
+    "action2": "Ispuni anketu"
   }
 });

@@ -43,7 +43,7 @@ define({
       "navRight": "Date"
     },
     "desktopView": {
-      "storymapsText": "O hartă informativă",
+      "storymapsText": "O Story Map",
       "builderButton": "Comutare la modul Instrument de creare",
       "facebookTooltip": "Partajare pe Facebook",
       "twitterTooltip": "Partajare pe Twitter",
@@ -52,6 +52,25 @@ define({
       "autoplayLabel": "Mod redare automată",
       "autoplayExplain1": "Modul de redare automată va avansa prin scenariul dvs. la un interval regulat. Această opţiune este ideală pentru un chioşc sau un monitor pentru afişare publică, dar, reţineţi, că în alte situaţii poate face ca scenariul să fie dificil de urmărit. Această caracteristică nu este acceptată pe ecranele de dimensiuni mici.",
       "autoplayExplain2": "Când acest mod este activ, sunt afişate butoane pentru a reda/întrerupe scenariul şi pentru a regla viteza de navigare."
+    },
+    "bannerNotification": {
+      "learnMore": "Aflaţi mai multe",
+      "close": "Închidere",
+      "dontShowAgain": "Nu afişa acest mesaj din nou"
+    },
+    "httpsTransitionMessage": {
+      "bannerMsg": "Mesaj important referitor la Securitatea web şi Story Maps",
+      "s1h1": "Esri îmbunătăţeşte securitatea Story Maps",
+      "s1p1": "Story Maps sunt operaționale pe internet, iar comunitatea web depune toate eforturile pentru a stabili şi implementa o mai bună securitate. HTTPS, care furnizează o conexiune securizată pentru conţinutul transmis prin internet, este recunoscut din ce în ce mai des ca modalitatea agreată pentru a accesa conţinut web. Majoritatea browserelor moderne emit acum mesaje de avertizare atunci când HTTP este utilizat în loc de HTTPS. Datorită acestui standard din ce în ce mai des folosit, începând cu actualizarea din iunie 2018 a ArcGIS Online, Story Maps dvs. vor trebui să folosească HTTPS.",
+      "s1p2": "În mod concret, acest lucru înseamnă că o Story Map şi întregul său conţinut (inclusiv imagini, straturi tematice, aplicaţii încorporate şi site-uri web) trebuie să fie accesate folosind mai degrabă link-uri care încep cu HTTPS decât HTTP. Acest lucru asigură cititorilor dvs. o experienţă optimă, deoarece cele mai multe browsere web vor indica faptul că relatările dvs. sunt sigure.",
+      "s2h1": "Ce trebuie să fac?",
+      "s2p1": "Esri depune toate eforturile pentru a face această tranziţie să fie una uşoară pentru autorii Story Map şi pentru cititori. Sunt disponibile acum instrumentele în aplicaţiile de creare Story Map şi în Relatările mele care vă ajută să găsiţi conţinut nesigur (HTTP) în relatările dvs. şi vă oferă recomandări pentru modul în care puteţi să-l gestionați. Verificaţi-vă relatările pentru a vedea dacă includ conţinut nesigur și actualizați la HTTPS înainte de iunie 2018.",
+      "action1": "Închidere",
+      "action2": "Verificaţi-mi acum relatările",
+      "action3": "Aflaţi mai multe"
+    },
+    "licenseChange2018": {
+      "noAccess": "Contul dvs. (%USER_NAME%) nu este licențiat să deschidă o hartă informativă care nu este publică. Solicitați-i administratorului organizației să vă aloce un tip de utilizator care include hărți informative sau o licență pentru aplicații esențiale de completare."
     }
   },
   "builder": {
@@ -122,6 +141,9 @@ define({
       "settingsExtentModifyBtn": "Editare extindere curentă",
       "settingsExtentApplyBtn": "Aplicare pe harta principală",
       "settingsExtentUseMainMap": "Utilizare extindere principală a hărţii"
+    },
+    "storyTellerUserType": {
+      "notCreatorError": "Contul dvs. (%USER_NAME%) nu are licența necesară pentru utilizarea aplicațiilor de creare a hărților informative clasice. Solicitați-i administratorului organizației dvs. să vă aloce un tip de utilizator Creator."
     }
   },
   "swipe": {
@@ -190,7 +212,7 @@ define({
       "settingsSeriesHelpContent2": "Seriile de preluare vă permit să creaţi şi să editaţi o selecţie de locaţii împreună cu titlurile şi textele care le însoţesc. Dacă harta dvs. web conţine semne de carte, acestea vor fi afişate. Puteţi dezactiva seriile, însă configuraţia va fi păstrată pentru a fi utilizată în viitor.",
       "settingsSeriesHelpLink": "Vedeţi aici un exemplu de aplicaţie cu o serie de preluare",
       "preview": "Previzualizare interfaţă cu utilizatorul",
-      "settingsLocateButtonExplain": "Această funcţionalitate este acceptată pe majoritatea dispozitivelor mobile şi browserelor desktop (inclusiv Internet Explorer 9+).",
+      "settingsLocateButtonExplain": "Suportat pe majoritatea browserelor. Apare numai dacă harta cu povestiri se accesează prin intermediul HTTPS. Nu apare dacă povestirea este încorporată.",
       "settingsLocateButton": "Activaţi butonul „Localizare” în browserele acceptate",
       "settingsAddressSearch": "Activare instrument de căutare adrese"
     },
@@ -248,7 +270,7 @@ define({
       "shareHeader2": "Povestea dvs. este accesibilă membrilor organizaţiei (este necesară conectarea).",
       "shareLinkHeader": "Partajaţi povestea",
       "shareLinkOpen": "DESCHIDERE",
-      "learnMore": "Învăţaţi mai mult",
+      "learnMore": "Aflaţi mai multe",
       "shareA1": "Utilizaţi %SHAREIMG% în <a href='%LINK1%' target='_blank'>pagina de element corespunzătoare aplicaţiei</a>. Dacă doriţi şi să anulaţi partajarea hărţii web, utilizaţi <a href='%LINK2%' target='_blank'>pagina de element corespunzătoare hărţii web</a>.",
       "shareWarning": "Partajarea %WITH% a fost dezactivată, deoarece nu mai sunteţi proprietarul <a href='%LINK%' target='_blank'>hărţii web</a>.",
       "shareWarningWith1": "public",
@@ -291,5 +313,31 @@ define({
       "cancel": "Anulare",
       "placeholder": "Introducere termen de căutare"
     }
+  },
+  "httpsTransitionNotification": {
+    "s1h1": "Esri îmbunătățește securitatea hărților informative",
+    "s1p1": "Hărțile dvs. informative se află pe web, iar comunitatea web lucrează în permanență pentru a stabili și implementa o securitate mai bună. HTTPS, care oferă o conexiune securizată pentru conținutul transmis prin internet, devine metoda așteptată pentru a accesa conținut web. Acum, majoritatea browserelor moderne afișează mesaje de avertizare atunci când se utilizează HTTP în loc de HTTPS. Având în vedere acest standard nou, vă recomandăm insistent să utilizați linkuri HTTPS pentru autorizarea și partajarea hărților informative și să utilizați numai URL-uri HTTPS atunci când încorporați conținut web sau când adăugați linkuri către imagini în cadrul unei hărți informative.",
+    "s1p2": "În mod concret, acest lucru înseamnă că o hartă informativă și întregul său conținut (inclusiv imagini, straturi tematice, aplicații încorporate și site-uri web) trebuie să fie accesate folosind mai degrabă link-uri care încep cu HTTPS decât cu HTTP. Acest lucru le asigură cititorilor dvs. o experiență optimă, deoarece cele mai multe browsere web vor indica faptul că relatările dvs. sunt sigure.",
+    "s2h1": "Ce trebuie să fac?",
+    "s2p1": "Esri depune toate eforturile pentru a face ca această tranziție să fie una ușoară pentru autorii de hărți informative și pentru cititori. Sunt disponibile acum instrumente în aplicațiile de creare a hărților informative și în Relatările mele, care vă ajută să găsiți conținut nesigur (HTTP) în relatările dvs. și care vă oferă recomandări pentru modul în care puteți să-l gestionați. Vă rugăm să vă verificați relatările pentru a vedea dacă includ conținut nesigur și să actualizați la HTTPS cât mai curând posibil.",
+    "action1": "Închidere",
+    "action2": "Verificați-mi acum relatările",
+    "action3": "Aflați mai multe"
+  },
+  "embedBar": {
+    "share": "Partajare",
+    "fullScreen": "Pe tot ecranul",
+    "enlarge": "Mărire",
+    "newTab": "Deschideți într-o filă nouă",
+    "tagline": "O hartă informativă",
+    "exitFullScreen": "Părăsiți modul pe tot ecranul"
+  },
+  "june2018SurveyMessage": {
+    "bannerMsg": "Vă putem solicita un lucru? Acesta va contribui la modelarea viitorului hărților informative.",
+    "s1h1": "Împărtășiți-vă gândurile, modelați viitorul",
+    "s1p1": "Informațiile furnizate de dvs. reprezintă sursa noastră cea mai importantă de feedback și faptul că aflăm mai multe despre dvs. ne va ajuta să îmbunătățim hărțile informative. V-am fi recunoscători dacă ați putea participa la acest chestionar de trei minute.",
+    "s2p1": "Ca întotdeauna, vă mulțumim că utilizați hărțile informative Esri!",
+    "action1": "Închidere",
+    "action2": "Parcurgeți chestionarul"
   }
 });

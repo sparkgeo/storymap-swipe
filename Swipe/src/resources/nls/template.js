@@ -44,7 +44,7 @@ define({
 				navRight: "Data"
 			},
 			desktopView: {
-				storymapsText: "A story map",
+				storymapsText: "A Story Map",
 				builderButton: "Switch to builder mode",
 				facebookTooltip: "Share on Facebook",
 				twitterTooltip: "Share on Twitter",
@@ -53,6 +53,25 @@ define({
 				autoplayLabel: "Autoplay mode",
 				autoplayExplain1: "Autoplay mode will advance through your story at a regular interval. This is ideal on a kiosk or public display monitor, but be aware that in other situations it may make the story harder to read. This feature isn't supported on small displays.",
 				autoplayExplain2: "When this mode is active there are controls to play/pause the story and adjust the navigation speed."
+			},
+			bannerNotification: {
+				learnMore: "Learn More",
+				close: "Close",
+				dontShowAgain: "Don't show this message again"
+			},
+			httpsTransitionMessage: {
+				bannerMsg: "Important Message about Web Security and Story Maps",
+				s1h1: "Esri is enhancing the security of Story Maps",
+				s1p1: "Your Story Maps live on the web, and the web community is always working to establish and implement better security. HTTPS, which provides a secure connection for content transmitted over the internet, is emerging as the expected way to access web content. Most modern browsers now show warning messages when HTTP instead of HTTPS is used. Because of this emerging standard, beginning with the June 2018 update to ArcGIS Online, your Story Maps will need to use HTTPS.",
+				s1p2: "Practically speaking, this means a Story Map and all its content (including images, layers, embedded apps and websites) must be accessed using links that start with HTTPS rather than HTTP. This ensures the best experience for your readers because most web browsers will indicate that your stories are secure.",
+				s2h1: "What do I need to do?",
+				s2p1: "Esri is working to make this an easy transition for Story Map authors and readers. Tools are available now in Story Map builders and My Stories that help you find insecure content (HTTP) in your stories and provide recommendations for how to address it. Please check your stories for insecure content and update to HTTPS before June 2018.",
+				action1: "Close",
+				action2: "Check my stories now",
+				action3: "Learn more"
+  			},
+			licenseChange2018: {
+				noAccess: "Your account (%USER_NAME%) is not licensed to open a Story Map that is not public.  Please ask your organization administrator to assign you a user type that includes Story Maps or an add-on Essential Apps license."
 			}
 		},
 		builder: {
@@ -123,6 +142,9 @@ define({
 				settingsExtentModifyBtn: "Edit the current extent",
 				settingsExtentApplyBtn: "Apply on main map",
 				settingsExtentUseMainMap: "Use main map extent"
+			},
+			storyTellerUserType: {
+				notCreatorError: 'Your account (%USER_NAME%) is not licensed to use classic story map builders. Please ask your organization administrator to assign you a Creator user type.'
 			}
         },
 		swipe: {
@@ -191,7 +213,7 @@ define({
 				settingsSeriesHelpContent2: "Swipe series lets you create and edit a selection of locations with accompanying titles and text.  If your web map has bookmarks, they'll be displayed.  You can disable the series, but the configuration will be preserved for future use.",
 				settingsSeriesHelpLink: "See an example of an application with a swipe series here",
 				preview: "UI preview",
-				settingsLocateButtonExplain: "This functionality is supported on most mobile devices and desktop browsers (including Internet Explorer 9+).",
+				settingsLocateButtonExplain: "Supported on most browsers. Only appears when story map accessed over HTTPS. Does not appear if the story is embedded.",
 				settingsLocateButton: "Enable a 'Locate' button on supported browsers",
 				settingsAddressSearch: "Enable an address search tool"
 			},
@@ -292,10 +314,37 @@ define({
 				cancel: "Cancel",
 				placeholder: "Enter search term"
 			}
-		}
+		},
+		httpsTransitionNotification: {
+				s1h1: "Esri is enhancing the security of Story Maps",
+				s1p1: "Your Story Maps live on the web, and the web community is always working to establish and implement better security. HTTPS, which provides a secure connection for content transmitted over the internet, is emerging as the expected way to access web content. Most modern browsers now show warning messages when HTTP instead of HTTPS is used. Because of this emerging standard, we strongly recommend you use HTTPS links for authoring and sharing Story Maps, and only use HTTPS URLs when embedding web content or linking to images within a Story Map.",
+				s1p2: "Practically speaking, this means a Story Map and all its content (including images, layers, embedded apps and websites) should be accessed using links that start with HTTPS rather than HTTP. This ensures the best experience for your readers because most web browsers will indicate that your stories are secure.",
+				s2h1: "What do I need to do?",
+				s2p1: "Esri is working to make this an easy transition for Story Map authors and readers. Tools are available now in Story Map builders and My Stories that help you find insecure content (HTTP) in your stories and provide recommendations for how to address it. Please check your stories for insecure content and update to HTTPS as soon as possible.",
+				action1: "Close",
+				action2: "Check my stories now",
+				action3: "Learn more"
+			},
+			embedBar: {
+				share: "Share",
+				fullScreen: "Full screen",
+				enlarge: "Enlarge",
+				newTab: "Open in a new tab",
+				tagline: "A Story Map",
+				exitFullScreen: "Exit full screen"
+ 			},
+			june2018SurveyMessage: {
+				bannerMsg: "Can we ask you something? It will help shape the future of Story Maps.",
+				s1h1: "Share your thoughts, shape the future",
+				s1p1: "Your input is our single most important source of feedback, and learning more about you will help us improve Story Maps. We would be grateful if you could participate in this three-minute survey.",
+				s2p1: "As always, thanks for using Esri Story Maps!",
+				action1: "Close",
+				action2: "Take the survey"
+			}
     }),
 	"ar": 1,
 	"bs": 1,
+	"ca": 1,
 	"cs": 1,
 	"da": 1,
 	"de": 1,
@@ -305,8 +354,8 @@ define({
 	"fi": 1,
 	"fr": 1,
 	"he": 1,
-	"hi": 1,
 	"hr": 1,
+	"hu": 1,
 	"id": 1,
 	"it": 1,
 	"ja": 1,
@@ -320,10 +369,12 @@ define({
 	"pt-pt": 1,
 	"ro": 1,
 	"ru": 1,
+	"sl": 1,
 	"sr": 1,
 	"sv": 1,
 	"th": 1,
 	"tr": 1,
+	"uk": 1,
 	"vi": 1,
 	"zh-cn": 1,
 	"zh-hk": 1,

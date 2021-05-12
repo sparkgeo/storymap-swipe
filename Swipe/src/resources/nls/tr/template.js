@@ -43,7 +43,7 @@ define({
       "navRight": "Veri"
     },
     "desktopView": {
-      "storymapsText": "Öykü haritası",
+      "storymapsText": "Bir Story Map",
       "builderButton": "Derleyici moduna geç",
       "facebookTooltip": "Facebook'ta Paylaş",
       "twitterTooltip": "Twitter'da Paylaş",
@@ -52,6 +52,25 @@ define({
       "autoplayLabel": "Otomatik oynatma modu",
       "autoplayExplain1": "Otomatik oynatma modu düzenli aralıklarla hikayenizde ilerler. Bu özellik, bir kiosk ya da genel ekran için idealdir, ancak bunun bazı durumlarda hikayenin okunmasını güçleştirebileceğini unutmayın. Bu özellik küçük ekranlarda desteklenmez.",
       "autoplayExplain2": "Bu etkin durumdayken hikayeyi oynatacak/duraklatacak ve gezinme hızını ayarlayacak kontroller vardır."
+    },
+    "bannerNotification": {
+      "learnMore": "Daha Fazla Bilgi",
+      "close": "Kapat",
+      "dontShowAgain": "Bu iletiyi tekrar gösterme"
+    },
+    "httpsTransitionMessage": {
+      "bannerMsg": "Web Güvenliği ve Story Maps hakkında Önemli İleti",
+      "s1h1": "Esri, Story Maps'in güvenliğini geliştiriyor",
+      "s1p1": "Story Maps'iniz web'de yayınlanır ve web topluluğu her zaman daha iyi güvenlik sağlamak ve uygulamak için çalışmaktadır. İnternet üzerinden iletilen içerik için güvenli bir bağlantı sağlayan HTTPS, web içeriğine erişmenin birincil yolu olarak kullanılmaktadır. Çoğu modern tarayıcı artık, HTTPS yerine HTTP kullanıldığında uyarı mesajları göstermektedir. Bu yeni geliştirilen standart nedeniyle Haziran 2018 ArcGIS Online güncellemesinden itibaren Story Maps'te HTTPS kullanılması gerekecektir.",
+      "s1p2": "Pratik olarak bu, bir Story Map demektir ve tüm içeriğine (görüntüler, katmanlar, gömülü uygulamalar ve web siteleri dahil) HTTP yerine HTTPS ile başlayan bağlantılar kullanılarak erişim sağlanmalıdır. Bu, okuyucularınız için en iyi deneyimi sağlar; çünkü çoğu web tarayıcısında bu, hikayelerinizin güvenli olduğu anlamına gelir.",
+      "s2h1": "Ne yapmam gerekiyor?",
+      "s2p1": "Esri, Story Map yazarları ve okuyucuları için bu geçişi kolaylaştırmaya çalışmaktadır. Artık Story Map oluşturucuları ve Hikayelerim'de, hikayelerinizdeki güvensiz içeriği (HTTP) bulmanıza yardımcı olacak ve bunları nasıl ele alacağınıza dair tavsiyelerde bulunacak araçlar mevcuttur. Lütfen hikayenizi güvenli olmayan içeriklere karşı kontrol edin ve Haziran 2018'den önce HTTPS'ye güncelleyin.",
+      "action1": "Kapat",
+      "action2": "Hikayelerimi şimdi kontrol et",
+      "action3": "Daha fazla bilgi"
+    },
+    "licenseChange2018": {
+      "noAccess": "Hesabınız (%USER_NAME%) herkese açık olmayan bir Hikaye Haritasını açmak için lisanslandırılmamış. Lütfen kuruluş yöneticinizden Hikaye Haritaları veya eklenti Temel Uygulamalar lisansı içeren bir kullanıcı türü atamasını isteyin."
     }
   },
   "builder": {
@@ -122,6 +141,9 @@ define({
       "settingsExtentModifyBtn": "Geçerli yayılımı düzenle",
       "settingsExtentApplyBtn": "Ana haritaya uygula",
       "settingsExtentUseMainMap": "Ana harita yayılımını kullan"
+    },
+    "storyTellerUserType": {
+      "notCreatorError": "Hesabınızın (%USER_NAME%) klasik story map oluşturucularını kullanma yetkisi yok. Kuruluşunuzun yöneticisinden size bir Creator kullanıcı türü atamasını isteyin."
     }
   },
   "swipe": {
@@ -190,7 +212,7 @@ define({
       "settingsSeriesHelpContent2": "Swipe serisi, beraberinde başlıklar ve metin ile seçili bir konum kümesi oluşturmanıza ve bunu düzenlemenize izin verir.  Web haritanızın yer işaretleri varsa, bunlar görüntülenir.  Seriyi devre dışı bırakabilirsiniz, ancak yapılandırma gelecekte kullanılmak üzere saklanır.",
       "settingsSeriesHelpLink": "Bir swipe serisi olan bir uygulama örneğini burada görebilirsiniz",
       "preview": "Kullanıcı arayüzü önizlemesi",
-      "settingsLocateButtonExplain": "Bu işlevsellik çoğu mobil cihazda ve (Internet Explorer 9+ dahil) masaüstü tarayıcısında desteklenir.",
+      "settingsLocateButtonExplain": "Çoğu tarayıcıda desteklenir. Yalnızca hikaye haritasına HTTPS üzerinden erişim sağlandığında görünür. Hikaye gömülü ise görünmez.",
       "settingsLocateButton": "Desteklenen tarayıcılarda 'Konum Bul' düğmesini etkileştir",
       "settingsAddressSearch": "Adres arama aracını etkinleştir"
     },
@@ -291,5 +313,31 @@ define({
       "cancel": "İptal",
       "placeholder": "Arama terimini gir"
     }
+  },
+  "httpsTransitionNotification": {
+    "s1h1": "Esri, Story Maps'in güvenliğini geliştiriyor",
+    "s1p1": "Hikaye Haritanız web’de yayınlanır ve web topluluğu her zaman daha iyi güvenlik sağlamak ve uygulamak için çalışmaktadır. İnternet üzerinden iletilen içerik için güvenli bir bağlantı sağlayan HTTPS, web içeriğine erişmenin birincil yolu olarak kullanılmaktadır. Çoğu modern tarayıcı artık, HTTPS yerine HTTP kullanıldığında uyarı mesajları göstermektedir. Bu yeni standart nedeniyle, Hikaye Haritaları oluştururken ve paylaşırken HTTPS bağlantıları kullanmanızı ve Story Map’e web içeriği yerleştirirken veya görüntü bağlantısı yaparken yalnızca HTTPS URL’leri kullanmanızı öneririz.",
+    "s1p2": "Pratik olarak, bu bir Hikaye Haritası anlamına gelir ve tüm içeriği (görüntüler, katmanlar, gömülü uygulamalar ve web siteleri dahil) HTTP yerine HTTPS ile başlayan bağlantılar kullanılarak erişilmelidir. Bu, okuyucularınız için en iyi deneyimi sağlar; çünkü çoğu web tarayıcısı hikayelerinizin güvenli olduğunu gösterecektir.",
+    "s2h1": "Ne yapmam gerekiyor?",
+    "s2p1": "Esri, Story Map sahipleri ve okuyucuları için bu geçişi kolaylaştırmaya çalışmaktadır. Artık Story Map oluşturucuları ve Hikayelerim’de, hikayelerinizdeki güvensiz içeriği (HTTP) bulmanıza yardımcı olacak ve bunları nasıl ele alacağınıza dair tavsiyelerde bulunacak araçlar mevcuttur. Lütfen hikayenizi güvenli olmayan içeriklere karşı kontrol edin ve bir an önce HTTPS’ye güncelleyin.",
+    "action1": "Kapat",
+    "action2": "Hikayelerimi şimdi kontrol et",
+    "action3": "Daha fazla bilgi"
+  },
+  "embedBar": {
+    "share": "Paylaş",
+    "fullScreen": "Tam ekran",
+    "enlarge": "Genişlet",
+    "newTab": "Yeni sekmede aç",
+    "tagline": "Bir Hikaye Haritası",
+    "exitFullScreen": "Tam ekrandan çık"
+  },
+  "june2018SurveyMessage": {
+    "bannerMsg": "Bir şey sorabilir miyiz? Story Maps’in geleceğini şekillendirmemize yardımcı olacak.",
+    "s1h1": "Düşüncelerinizi paylaşın ve geleceği şekillendirin",
+    "s1p1": "Verdiğiniz bilgiler, en önemli geri bildirim kaynağımız ve sizinle ilgili daha çok şey öğrenmek Story Maps’i geliştirmemize yardımcı olacak. Üç dakikanızı alacak bu ankete katılırsanız memnun oluruz.",
+    "s2p1": "Her zaman olduğu gibi Esri Story Maps’i kullandığınız için teşekkür ederiz!",
+    "action1": "Kapat",
+    "action2": "Ankete katıl"
   }
 });

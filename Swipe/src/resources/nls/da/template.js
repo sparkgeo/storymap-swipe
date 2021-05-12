@@ -43,7 +43,7 @@ define({
       "navRight": "Data"
     },
     "desktopView": {
-      "storymapsText": "Et historiekort",
+      "storymapsText": "Et Story Map",
       "builderButton": "Skift til builder-tilstand",
       "facebookTooltip": "Del på Facebook",
       "twitterTooltip": "Del på Twitter",
@@ -52,6 +52,25 @@ define({
       "autoplayLabel": "Autoplay-tilstand",
       "autoplayExplain1": "Autoplay-tilstand vil gå frem igennem din historie med et regelmæssigt interval. Dette er ideelt på en kiosk-skærm eller offentlig tilgængelig skærm, men du skal være opmærksom på, at dette kan gøre din historie vanskeligere at læse i andre situationer. Denne funktion understøttes ikke på små skærme.",
       "autoplayExplain2": "Når denne tilstand er aktiv, er der knapper til at afspille din historie eller sætte den på pause og til at justere navigationshastigheden."
+    },
+    "bannerNotification": {
+      "learnMore": "Yderligere oplysninger",
+      "close": "Luk",
+      "dontShowAgain": "Vis ikke denne meddelelse igen"
+    },
+    "httpsTransitionMessage": {
+      "bannerMsg": "Vigtig meddelelse om internetsikkerhed og Story Maps",
+      "s1h1": "Esri forbedrer sikkerheden for Story Maps",
+      "s1p1": "Dine Story Maps lever på nettet, og internetfællesskabet arbejder altid for at skabe og implementere bedre sikkerhed. HTTPS som giver en sikker forbindelse til indhold, der sendes over internettet, bliver den mest almindelige måde at få adgang til webindhold på. De fleste moderne browsere viser nu advarselsmeddelelser, når der bruges HTTP i stedet for HTTPS. På grund af denne nye standard, der starter med opdateringen i juni 2018 til ArcGIS Online, skal dine Story Maps bruge HTTPS.",
+      "s1p2": "I praksis betyder det, at et Story Map og alt dets indhold (herunder billeder, lag, indlejrede apps og websteder) skal åbnes ved hjælp af links, der starter med HTTPS i stedet for HTTP. Det sikrer den bedste oplevelse for dine læsere, fordi de fleste webbrowsere vil vise, at dine historier er sikre.",
+      "s2h1": "Hvad skal jeg gøre?",
+      "s2p1": "Esri arbejder på at gøre overgangen let for Story Map-forfattere og -læsere. Der er værktøjer tilgængelige nu i Story Map builders og Mine historier, der hjælper dig med at finde usikkert indhold (HTTP) i dine historier og giver anbefalinger til, hvordan du ordner det. Kontrollér dine historier for usikkert indhold og opdatér til HTTPS inden juni 2018.",
+      "action1": "Luk",
+      "action2": "Kontrollér mine historier nu",
+      "action3": "Lær mere"
+    },
+    "licenseChange2018": {
+      "noAccess": "Din konto (%USER_NAME%) har ikke licens til at åbne et Story Map, der ikke er offentligt. Bed din organisationsadministrator om at knytte dig til en brugertype, der omfatter Story Maps eller en add-on Essential Apps-licens."
     }
   },
   "builder": {
@@ -122,6 +141,9 @@ define({
       "settingsExtentModifyBtn": "Redigér den aktuelle udstrækning",
       "settingsExtentApplyBtn": "Anvend på hovedkort",
       "settingsExtentUseMainMap": "Brug hovedkortudstrækning"
+    },
+    "storyTellerUserType": {
+      "notCreatorError": "Din konto (%USER_NAME%) er ikke licenseret til at benytte klassiske story map-buildere. Bed din organisationsadministrator om at tildele dig en Creator-licens."
     }
   },
   "swipe": {
@@ -190,7 +212,7 @@ define({
       "settingsSeriesHelpContent2": "Med swipe-serien kan du oprette og redigere et udvalg af steder med ledsagende titler og tekst. Hvis dit webkort har bogmærker, bliver disse vist. Du kan deaktivere serien, men konfigurationen vil blive bevaret til fremtidig brug.",
       "settingsSeriesHelpLink": "Se et eksempel på en applikation med swipe-serien her",
       "preview": "UI-forhåndsvisning",
-      "settingsLocateButtonExplain": "Denne funktionalitet understøttes på de fleste mobile enheder og pc-browsere (inkl. Internet Explorer 9+).",
+      "settingsLocateButtonExplain": "Understøttes af de fleste browsere. Vises kun, når historiekortet åbnes via HTTPS. Vises ikke, hvis historien er indlejret.",
       "settingsLocateButton": "Aktivér browsere, der har en 'Find'-knap",
       "settingsAddressSearch": "Aktivér et adressesøgningsværktøj"
     },
@@ -248,7 +270,7 @@ define({
       "shareHeader2": "Din historie er tilgængelig for dine organisationsmedlemmer (der kræves login).",
       "shareLinkHeader": "Del din historie",
       "shareLinkOpen": "ÅBN",
-      "learnMore": "Find ud af mere",
+      "learnMore": "Lær mere",
       "shareA1": "Brug %SHAREIMG% on <a href='%LINK1%' target='_blank'>siden med applikationselementet</a>. Brug <a href='%LINK2%' target='_blank'>siden med webkortelementer</a>, hvis webkortet heller ikke skal deles.",
       "shareWarning": "Deling %WITH% er blevet deaktiveret, fordi du ikke er ejer af <a href='%LINK%' target='_blank'>webkortet</a>.",
       "shareWarningWith1": "offentligt",
@@ -291,5 +313,31 @@ define({
       "cancel": "Annuller",
       "placeholder": "Angiv søgeterm"
     }
+  },
+  "httpsTransitionNotification": {
+    "s1h1": "Esri forbedrer sikkerheden for Story Maps",
+    "s1p1": "Dine Story Maps lever på nettet, og internetfællesskabet arbejder altid for at skabe og implementere bedre sikkerhed. HTTPS som giver en sikker forbindelse til indhold, der sendes over internettet, bliver den mest almindelige måde at få adgang til webindhold på. De fleste moderne browsere viser nu advarselsmeddelelser, når der bruges HTTP i stedet for HTTPS. På grund af denne nye standard anbefaler vi kraftigt, at du bruger HTTPS-links til at redigere og dele Story Maps, og at du udelukkende bruger HTTPS-URL'er, når du integrerer webindhold eller linker til billeder i i et Story Map.",
+    "s1p2": "I praksis betyder det, at et Story Map og alt dets indhold (herunder billeder, lag, indlejrede apps og websteder) bør åbnes ved hjælp af links, der starter med HTTPS i stedet for HTTP. Det sikrer den bedste oplevelse for dine læsere, fordi de fleste webbrowsere vil vise, at dine historier er sikre.",
+    "s2h1": "Hvad skal jeg gøre?",
+    "s2p1": "Esri arbejder på at gøre overgangen nem for Story Map- forfattere og -læsere. Der er værktøjer tilgængelige nu i Story Map builders og Mine historier, der hjælper dig med at finde usikkert indhold (HTTP) i dine historier og giver anbefalinger til, hvordan du ordner det. Kontrollér dine historier for usikkert indhold og opdatér til HTTPS snarest muligt.",
+    "action1": "Luk",
+    "action2": "Kontrollér mine historier nu",
+    "action3": "Lær mere"
+  },
+  "embedBar": {
+    "share": "Opdatér",
+    "fullScreen": "Fuld skærm",
+    "enlarge": "Forstør",
+    "newTab": "Åbn på en ny fane",
+    "tagline": "Et Story Map",
+    "exitFullScreen": "Afslut Fuld skærm-tilstand"
+  },
+  "june2018SurveyMessage": {
+    "bannerMsg": "Kan vi spørge dig om noget? Det vil bidrage til at definere fremtiden for Story Maps.",
+    "s1h1": "Del dine tanker, og påvirk fremtiden",
+    "s1p1": "Dit input er vores vigtigste kilde til feedback, og når vi ved mere om dig, hjælper det os med at forbedre Story Maps. Det ville glæde os, hvis du vil deltage i denne undersøgelse, der varer tre minutter.",
+    "s2p1": "Tak, fordi du bruger Esri Story Maps!",
+    "action1": "Luk",
+    "action2": "Deltag i undersøgelsen"
   }
 });

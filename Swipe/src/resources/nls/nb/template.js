@@ -52,6 +52,25 @@ define({
       "autoplayLabel": "Automatisk avspillingsmodus",
       "autoplayExplain1": "Automatisk avspillingsmodus går videre i historien med gitte intervaller. Dette fungerer utmerket til kiosker eller informasjonsskjermer, men kan i andre situasjoner gjøre det vanskeligere å lese historien. Denne funksjonen støttes ikke på små skjermer.",
       "autoplayExplain2": "Når denne modusen er aktivert, vises det kontroller for å spille av/pause historien og justere navigeringshastigheten."
+    },
+    "bannerNotification": {
+      "learnMore": "Få mer informasjon",
+      "close": "Lukk",
+      "dontShowAgain": "Ikke vis denne meldingen igjen"
+    },
+    "httpsTransitionMessage": {
+      "bannerMsg": "Viktig informasjon om websikkerhet og fortellingskart",
+      "s1h1": "Esri forbedrer sikkerheten for fortellingskart",
+      "s1p1": "Fortellingskartene lever på nettet, og Internett-fellesskapet jobber hele tiden med å forbedre sikkerheten. HTTPS som gir en sikker forbindelse til innhold som sendes over Internett, blir den vanligste måten å få tilgang til Internett-innhold på. De fleste moderne nettlesere viser en advarsel når det brukes HTTP i stedet for HTTPS. Som en følge av denne nye standarden vil fortellingskartene bruke HTTPS fra og med oppdateringen av ArcGIS Online som kommer i juni 2018.",
+      "s1p2": "Det betyr at du får tilgang til et fortellingskart og alt innholdet i det (inkludert bilder, lag, innebygde apper og nettsteder) ved hjelp av koblinger som begynner med HTTPS i stedet for HTTP. Dette gir leserne dine den beste opplevelsen siden de fleste nettleserne viser at fortellingene dine er sikre.",
+      "s2h1": "Hva må jeg gjøre?",
+      "s2p1": "Esri arbeider for at det skal bli en enkel overgang for alle som lager og bruker fortellingskart. Byggeverktøyene for Story Map og Mine fortellinger inneholder nå verktøy som hjelper deg med å finne usikkert innhold (HTTP) i fortellingene dine og gir råd om hvordan du ordner dette. Kontroller om fortellingene dine har usikkert innhold og oppdater til HTTPS før juni 2018.",
+      "action1": "Lukk",
+      "action2": "Kontroller mine fortellinger nå",
+      "action3": "Mer informasjon"
+    },
+    "licenseChange2018": {
+      "noAccess": "Kontoen (%USER_NAME%) er ikke lisensiert til å åpne et fortellingskart som ikke er offentlig. Be administratoren for organisasjonen om å tilordne deg en brukertype som omfatter Story Maps eller en tilleggslisens for Essential Apps."
     }
   },
   "builder": {
@@ -122,6 +141,9 @@ define({
       "settingsExtentModifyBtn": "Rediger gjeldende utstrekning",
       "settingsExtentApplyBtn": "Bruk på hovedkart",
       "settingsExtentUseMainMap": "Bruk utstrekningen for hovedkartet"
+    },
+    "storyTellerUserType": {
+      "notCreatorError": "Kontoen (%USER_NAME%) har ikke lisens til å bruke byggeverktøyene for klassiske Story Maps. Be administratoren for organisasjonen om å tilordne Creator-brukertypen til deg."
     }
   },
   "swipe": {
@@ -190,7 +212,7 @@ define({
       "settingsSeriesHelpContent2": "Med sveipeserier kan du opprette og redigere et utvalg av lokasjoner med tilhørende titler og tekst. Hvis du har et webkart med bokmerker, vises de. Du kan deaktivere serien, men konfigurasjonen beholdes for fremtidig bruk.",
       "settingsSeriesHelpLink": "Se et eksempel på et program med en sveipeserie her",
       "preview": "Forhåndsvisning av brukergrensesnitt",
-      "settingsLocateButtonExplain": "Denne funksjonen støttes på de fleste mobile enheter og nettlesere på stasjonære datamaskiner (inkludert Internet Explorer 9+).",
+      "settingsLocateButtonExplain": "Støttes på de fleste weblesere. Vises bare når fortellingskart brukes over HTTPS. Vises ikke hvis historien er innebygd.",
       "settingsLocateButton": "Aktiver en 'Finn'-knapp i støttede nettlesere",
       "settingsAddressSearch": "Aktiver et adressesøkverktøy"
     },
@@ -248,7 +270,7 @@ define({
       "shareHeader2": "Historien din er tilgjengelig for medlemmer av organisasjonen din (krever pålogging).",
       "shareLinkHeader": "Del historien",
       "shareLinkOpen": "ÅPNE",
-      "learnMore": "Få mer informasjon",
+      "learnMore": "Mer informasjon",
       "shareA1": "Bruk %SHAREIMG% på <a href='%LINK1%' target='_blank'>elementsiden for programmet</a>. Hvis du også vil oppheve deling av nettkartet, bruker du <a href='%LINK2%' target='_blank'>elementsiden for nettkartet</a>.",
       "shareWarning": "Deling av %WITH% er deaktivert fordi du ikke eier <a href='%LINK%' target='_blank'>webkartet</a>.",
       "shareWarningWith1": "offentlig",
@@ -291,5 +313,31 @@ define({
       "cancel": "Avbryt",
       "placeholder": "Angi søkeord"
     }
+  },
+  "httpsTransitionNotification": {
+    "s1h1": "Esri forbedrer sikkerheten for fortellingskart",
+    "s1p1": "Fortellingskartene lever på nettet, og Internett-fellesskapet jobber hele tiden med å forbedre sikkerheten. HTTPS, som gir en sikker forbindelse til innhold som sendes over Internett, begynner å bli den vanligste måten å få tilgang til Internett-innhold på. De fleste moderne nettlesere viser en advarsel når det brukes HTTP i stedet for HTTPS. Som følge av denne nye standarden anbefaler vi på det sterkeste å bruke HTTPS-koblinger når du utarbeider og deler fortellingskart, og bare bruke HTTPS-URL-er når du bygger inn webinnhold eller oppretter koblinger til bilder i et fortellingskart.",
+    "s1p2": "Det betyr at du får tilgang til et fortellingskart og alt innholdet i det (inkludert bilder, lag, innebygde apper og nettsteder) ved hjelp av koblinger som begynner med HTTPS i stedet for HTTP. Dette gir leserne dine den beste opplevelsen siden de fleste nettleserne viser at fortellingene dine er sikre.",
+    "s2h1": "Hva må jeg gjøre?",
+    "s2p1": "Esri arbeider for at det skal bli en enkel overgang for alle som lager og bruker fortellingskart. Byggeverktøyene for Story Map og My Stories inneholder nå verktøy som hjelper deg med å finne usikkert innhold (HTTP) i fortellingene dine, og gir råd om hvordan du ordner dette. Kontroller om fortellingene dine har usikkert innhold, og oppdater til HTTPS så snart som mulig.",
+    "action1": "Lukk",
+    "action2": "Kontroller mine fortellinger nå",
+    "action3": "Mer informasjon"
+  },
+  "embedBar": {
+    "share": "Del",
+    "fullScreen": "Fullskjerm",
+    "enlarge": "Forstørr",
+    "newTab": "Åpne i ny fane",
+    "tagline": "Et fortellingskart",
+    "exitFullScreen": "Avslutt fullskjerm"
+  },
+  "june2018SurveyMessage": {
+    "bannerMsg": "Kan vi spørre deg om noe? Det vil bidra til å forme fortellingskartenes fremtid.",
+    "s1h1": "Si hva du tenker, bidra til å forme fremtiden",
+    "s1p1": "Du er vår viktigste kilde til tilbakemeldinger, og når vi vet mer om deg, kan vil lettere forbedre fortellingskartene. Vi setter stor pris på om du kan avse tre minutter til å delta i denne undersøkelsen.",
+    "s2p1": "Nok en gang takk for at du bruker Esri Story Maps!",
+    "action1": "Lukk",
+    "action2": "Ta undersøkelsen"
   }
 });
